@@ -16,7 +16,7 @@ function dbConnect(){
 function getInfos($namePlanet){
 	$db = dbConnect();
 
-    $req = $db->prepare('SELECT * FROM Planets WHERE id = ?');
+    $req = $db->prepare('SELECT * FROM Planets WHERE namePlanet = ?');
     $req->execute(array($namePlanet));
     $infos = $req->fetch();
     return $infos;
