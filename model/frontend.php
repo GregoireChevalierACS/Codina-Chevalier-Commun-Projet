@@ -19,7 +19,8 @@ function getInfos($namePlanet){
     $req = $db->prepare('SELECT * FROM Planets WHERE namePlanet = ?');
     $req->execute(array($namePlanet));
     $infos = $req->fetch();
-    return $infos;
+    $arrayReturn = [$infos, $namePlanet];
+    return $arrayReturn;
 }
 
 

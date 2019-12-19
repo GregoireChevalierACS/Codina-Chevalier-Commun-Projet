@@ -1,7 +1,7 @@
 <?php 
-
-
-$title = 'Mercure'; ?>
+$infos = $infosArray[0]; 
+$namePlanet = $infosArray[1];
+$title = $namePlanet; ?>
 <?php ob_start(); ?>
 <em><a href="index.php?action=launched" class="btn btn-primary">
 Retour </a></em>

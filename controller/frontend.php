@@ -10,7 +10,7 @@ function launched(){
     require('view/frontend/launched.php');
 } 
 function mercure(){
-    $infos = getInfos('mercure');
+    $infosArray = getInfos('Mercure');
     require('view/frontend/infosPlanet.php');
 
 }
