@@ -2,7 +2,11 @@
     require('controller/frontend.php'); 
 
     if (isset($_GET['action'])){
-        echo 'Test'; 
+        if($_GET['action'] == 'launch'){
+            launched();   
+        } elseif($_GET['action'] == 'mercure'){
+            mercure();
+        } 
     }else{
 
         welcome();
