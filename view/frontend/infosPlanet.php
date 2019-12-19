@@ -3,7 +3,7 @@ $infos = $infosArray[0];
 $namePlanet = $infosArray[1];
 $title = $namePlanet; ?>
 <?php ob_start(); ?>
-<em><a href="index.php?action=launched" class="btn btn-primary">
+<em><a href="index.php" class="btn btn-primary">
 Retour </a></em>
 
 <div class="card  mb-3">
@@ -30,13 +30,13 @@ Retour </a></em>
         Periode de révolution: 
         <?php
         echo nl2br(htmlspecialchars($infos['orbital_period']));
-        ?>
+        ?> jours terrien
         </p>
         <p class="card-text">
         Periode de rotation: 
         <?php
         echo nl2br(htmlspecialchars($infos['rotation_period']));
-        ?>
+        ?> jours terrien
         </p>
         <p class="card-text">
         Température: 
@@ -48,7 +48,7 @@ Retour </a></em>
         Diamètre: 
         <?php
         echo nl2br(htmlspecialchars($infos['diameter']));
-        ?>
+        ?> km
         </p>
         <p class="card-text">
         Masse: 

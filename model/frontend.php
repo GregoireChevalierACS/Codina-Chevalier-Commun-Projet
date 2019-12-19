@@ -23,6 +23,12 @@ function getInfos($namePlanet){
     return $arrayReturn;
 }
 
+function getNamePlanets(){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT namePlanet FROM Planets ORDER BY id');
+    $req->execute();
+    return $req ->fetchAll();
+}
 
 
 
