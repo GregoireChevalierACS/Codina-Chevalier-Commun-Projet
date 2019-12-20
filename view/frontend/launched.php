@@ -1,7 +1,14 @@
-<?php $title = 'Navette en chemin'; ?>
+<?php $title = 'Navette en chemin';
+ 
+ ?>
+ 
 <?php ob_start(); ?>
-<em><a href="index.php?action=mercure" class="btn btn-primary">
-Mercure </a></em>
 
+ <div class ="d-flex">
+ <?php foreach($namesPlanets as $name){ ?>
+      <em><a href="index.php?action=planets&name=<?=$name[0]?>" class="btn btn-primary"> <?=$name[0]?> </a></em>
+ <?php } ?> 
+    
+</div> 
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

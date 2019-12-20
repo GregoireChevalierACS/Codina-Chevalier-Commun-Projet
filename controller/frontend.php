@@ -7,10 +7,13 @@ require('view/frontend/welcome.php');
 }
 
 function launched(){
+    
+    $namesPlanets = getNamePlanets();
     require('view/frontend/launched.php');
 } 
-function mercure(){
-    getInfos('mercure');
+function planets($namePlanet){
+    $infosArray = getInfos($namePlanet);
     require('view/frontend/infosPlanet.php');
 
 }
+
