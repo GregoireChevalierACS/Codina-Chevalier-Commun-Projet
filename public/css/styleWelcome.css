@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3vh;
+    padding-left: 0.5vw;
+    width: 96vw;
+    height: 91vh;
+   
+}
+
+.fond{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    background-image: url("startscreenFond.png");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.vaisseau{
+    display: flex;
+    width: 15vw;
+    height: 15vh;
+    padding-left: 0vw;
+    padding-bottom: 0vh;
+}
+
+.boutonLancement{
+    background-color: aqua;
+    color: black;
+}
+
+#VAISSEAU{
+    /* animation: a1 3s forwards ease-in; */
+    animation-name: "a1";
+    animation-duration : 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-play-state : paused;
+    }
+
+@keyframes a1{
+    0%{
+        display: flex;
+        width: 15vw;
+        height: 15vh;
+        padding-left: 0vw;
+        padding-bottom: 0vh;
+    }100%{
+        display: flex;
+        width: 0.3vw;
+        height: 0.3vh;
+        padding-left: 49vw;
+        padding-bottom: 49vh;
+    }
+}
+
+
