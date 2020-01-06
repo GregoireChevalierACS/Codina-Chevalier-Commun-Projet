@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: left;
     align-items: flex-end;
-    background-image: url("startscreenFond.png");
+    background-image: url("startscreenFondV2.png");
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
@@ -21,8 +21,8 @@ body{
 
 .vaisseau{
     display: flex;
-    width: 15vw;
-    height: 15vh;
+    width: 25vw;
+    height: 28vh;
     padding-left: 0vw;
     padding-bottom: 0vh;
 }
@@ -44,17 +44,15 @@ body{
 @keyframes a1{
     0%{
         display: flex;
-        width: 15vw;
-        height: 15vh;
+        width: 25vw;
+        height: 28vh;
         padding-left: 0vw;
         padding-bottom: 0vh;
     }100%{
         display: flex;
-        width: 0.3vw;
-        height: 0.3vh;
+        width: 0.1vw;
+        height: 0.1vh;
         padding-left: 49vw;
-        padding-bottom: 49vh;
+        padding-bottom: 40vh;
     }
 }
-
-
