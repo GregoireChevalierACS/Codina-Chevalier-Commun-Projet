@@ -1,5 +1,5 @@
 <?php $title = 'Navette en chemin';
- 
+ $style = null;
  ?>
  
 <?php ob_start(); ?>
