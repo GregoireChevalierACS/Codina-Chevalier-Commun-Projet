@@ -1,7 +1,9 @@
 <?php 
 $infos = $infosArray[0]; 
 $namePlanet = $infosArray[1];
-$title = $namePlanet; ?>
+$title = $namePlanet;
+$style = null; ?>
+
 <?php ob_start(); ?>
 <em><a href="index.php" class="btn btn-primary">
 Retour </a></em>
