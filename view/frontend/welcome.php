@@ -10,7 +10,7 @@
         <button class="boutonLancement" id="BOUTONLANCEMENT" onclick="launch();">Launch !</button>
     </div>
     <div>
-        <img src="startscreenShipV3.png" id="VAISSEAU" class="vaisseau">
+        <img src="../../Ressources/VisuelsOK/startscreenShipV3.png" id="VAISSEAU" class="vaisseau">
     </div>
 
 </div>

@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: left;
     align-items: flex-end;
-    background-image: url("startscreenFondV2.png");
+    background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
