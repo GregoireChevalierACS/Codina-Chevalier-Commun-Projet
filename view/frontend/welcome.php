@@ -3,14 +3,14 @@
 <?php $script = 'public/js/welcome.js' ?>
 <?php ob_start(); ?>
 
-<!-- <em><a href="index.php?action=launch" class="btn btn-primary">Launch!</a></em> -->
+<!-- <em><a class="btn btn-primary">Launch!</a></em> -->
 
 <div class="fond">    
     <div>
-        <button class="boutonLancement" id="BOUTONLANCEMENT" onclick="launch();">Launch !</button>
+        <a href="javascript:delay('index.php?action=launch')"><button class="boutonLancement" id="BOUTONLANCEMENT" onclick="launch()" >Launch</button></a>
     </div>
     <div>
-        <img src="../../Ressources/VisuelsOK/startscreenShipV3.png" id="VAISSEAU" class="vaisseau">
+        <img src="../../DCAG/Ressources/VisuelsOK/startscreenShipV3.png" id="VAISSEAU" class="vaisseau">
     </div>
 
 </div>

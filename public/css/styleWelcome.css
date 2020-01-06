@@ -4,8 +4,10 @@ body{
     align-items: center;
     padding-top: 3vh;
     padding-left: 0.5vw;
-    width: 96vw;
+    width: 99vw;
     height: 91vh;
+    background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
+    background-repeat: no-repeat;
    
 }
 
@@ -13,16 +15,14 @@ body{
     display: flex;
     justify-content: left;
     align-items: flex-end;
-    background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
-    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
 }
 
 .vaisseau{
     display: flex;
-    width: 25vw;
-    height: 28vh;
+    width: 60%;
+    height: 60%;
     padding-left: 0vw;
     padding-bottom: 0vh;
 }
@@ -35,7 +35,7 @@ body{
 #VAISSEAU{
     /* animation: a1 3s forwards ease-in; */
     animation-name: "a1";
-    animation-duration : 3s;
+    animation-duration : 6s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-play-state : paused;
@@ -44,15 +44,21 @@ body{
 @keyframes a1{
     0%{
         display: flex;
-        width: 25vw;
-        height: 28vh;
+        width: 60%;
+        height: 60%;
         padding-left: 0vw;
         padding-bottom: 0vh;
+    }80%{
+        display: flex;
+        width: 40%;
+        height: 40%;
+        padding-left: 59vw;
+        padding-bottom: 60vh;
     }100%{
         display: flex;
-        width: 0.1vw;
-        height: 0.1vh;
-        padding-left: 49vw;
-        padding-bottom: 40vh;
+        width: 50%;
+        height: 50%;
+        padding-left: 59vw;
+        padding-bottom: 60vh;
     }
 }
