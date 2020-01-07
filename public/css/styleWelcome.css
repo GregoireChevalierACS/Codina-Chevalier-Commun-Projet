@@ -63,7 +63,7 @@ body{
     }
 }
 
-.ball {
+/* .ball {
     pointer-events: none;
     position: absolute;
     width: 10px;
@@ -82,4 +82,4 @@ body{
     z-index: 2;
     border: 3px solid black;
   }
-
+ */

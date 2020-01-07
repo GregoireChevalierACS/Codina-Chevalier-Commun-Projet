@@ -1,6 +1,6 @@
 <?php $title = 'Notre super site'; ?>
 <?php $style = 'public/css/styleWelcome.css'; ?>
-<?php //$script = 'public/js/CursorBalls.js' ?>
+<?php $script = 'public/js/welcome.js' ?>
 <?php ob_start(); ?>
 
 <!-- <em><a class="btn btn-primary">Launch!</a></em> -->
