@@ -8,6 +8,8 @@
             planets($_GET['name']);
         } elseif($_GET['action'] == 'infinimentGrand'){
             topics();
+        } elseif($_GET['action'] == 'infinimentPetit'){
+            minisizeTopics();
         } 
     }else{
 

@@ -20,3 +20,8 @@ function topics(){
     $namesPhenomenon = getNamePhenomenons();
     require('view/frontend/launchedInfinimentGrand.php');
 } 
+
+function minisizeTopics(){
+ //   $namesPlaceholder = getNamePlaceholder(); //remplacer les placeholders au moment de la création de la db
+    require('view/frontend/launchedInfinimentPetit.php');
+} 

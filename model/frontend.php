@@ -40,3 +40,11 @@ function getNamePhenomenons(){
     $req->execute();
     return $req ->fetchAll();
 }
+
+function getNamePlaceholder(){ //remplacer les placeholders au moment de la création de la db
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT nameOfplaceholder FROM PhenomenesPlaceholder ORDER BY id'); //remplacer les placeholders au moment de la création de la db
+    $db = dbConnect(); 
+    $req->execute();
+    return $req ->fetchAll();
+}
