@@ -24,6 +24,11 @@ function topics(){
     require('view/frontend/launchedInfinimentGrand.php');
 } 
 
+function phenomeneIG($namePhenomenonIG){
+    $infosPhenomeneIG = getInfosPhenomeneIG($namePhenomenonIG);
+    require('view/frontend/phenomenesIG.php');
+}
+
 function satellites($namesSatellite){
     $infosSatellites = getInfosSatellite($namesSatellite); 
     require('view/frontend/satellites.php');

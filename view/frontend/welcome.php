@@ -5,16 +5,19 @@
 
 <!-- <em><a class="btn btn-primary">Launch!</a></em> -->
 <div id="wrap"></div>
-<div class="fond">
-        
-    <div>
+<div>
         <a href="javascript:delay('index.php?action=launch')"><button class="boutonLancement" id="BOUTONLANCEMENT" onclick="launch()" >Launch</button></a>
-    </div>
+</div>
+    <div class="fond">
+    
+        <img src="Ressources/VisuelsOK/startscreenFondSol.png" class="sol">
+        <img src="Ressources/VisuelsOK/startscreenFondSol.png" class="sol2">
+
     <div>
         <img src="Ressources/VisuelsOK/startscreenShipV3.png" id="VAISSEAU" class="vaisseau">
     </div>
 
-</div>
+  </div>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

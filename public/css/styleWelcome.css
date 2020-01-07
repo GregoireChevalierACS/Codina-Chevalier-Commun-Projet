@@ -1,14 +1,12 @@
 body{
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 3vh;
     padding-left: 0.5vw;
-    width: 99vw;
-    height: 91vh;
+    width: 100vw;
+    height: 100vh;
     background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
-    background-repeat: no-repeat;
-   
+    background-size: 100vw 100vh;
+    z-index: -2;
 }
 
 .fond{
@@ -16,32 +14,60 @@ body{
     justify-content: left;
     align-items: flex-end;
     width: 100vw;
-    height: 100vh;
+    height: 97vh;
+}
+
+.sol{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    position: fixed;
+    z-index: 1;
+    width: 1000px;
+    height: 540px;
+}
+
+.sol2{
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 1;
+    margin-left: 1000px;
+    width: 1000px;
+    height: 540px;
+   -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .vaisseau{
     display: flex;
+    justify-content: left;
+    position: relative;
     width: 60%;
     height: 60%;
     padding-left: 0vw;
     padding-bottom: 0vh;
+    z-index: 3;
 }
 
 .boutonLancement{
     background-color: aqua;
     color: black;
+    position: fixed;
+    z-index: 5;
 }
 
 #VAISSEAU{
     /* animation: a1 3s forwards ease-in; */
-    animation-name: "a1";
-    animation-duration : 6s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-play-state : paused;
+    -webkit-animation-name: "a1";
+    -webkit-animation-duration : 6s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-play-state : paused;
     }
 
-@keyframes a1{
+@-webkit-keyframes a1{
     0%{
         display: flex;
         width: 60%;

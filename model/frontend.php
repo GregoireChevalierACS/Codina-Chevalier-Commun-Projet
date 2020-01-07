@@ -47,6 +47,13 @@ function getNamePhenomenons(){
     return $req ->fetchAll();
 }
 
+function getInfosPhenomeneIG($namePhenomenonIG){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM PhenomenesInfinimentGrand WHERE nameOfTopic = ? ORDER BY id');
+    $req->execute(array($namePhenomenonIG));
+    return $req ->fetchAll();
+}
+
 function getInfosSatellite($nameSatellite){
     $db = dbConnect(); 
     $req = $db->prepare('SELECT * FROM satellites WHERE nameSatellite = ? ORDER BY id');
