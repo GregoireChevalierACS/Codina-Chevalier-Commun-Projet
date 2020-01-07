@@ -32,11 +32,24 @@ function getNamePlanets(){
     $req->execute();
     return $req ->fetchAll();
 }
+function getNamesSatellites($namePlanet){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT nameSatellite FROM satellites WHERE namePlanet = ? ORDER BY id');
+    $req->execute(array($namePlanet));
+    return $req ->fetchAll();
+}
 
 
 function getNamePhenomenons(){
     $db = dbConnect(); 
     $req = $db->prepare('SELECT nameOfTopic FROM PhenomenesInfinimentGrand ORDER BY id');
     $req->execute();
+    return $req ->fetchAll();
+}
+
+function getInfosSatellite($nameSatellite){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM satellites WHERE nameSatellite = ? ORDER BY id');
+    $req->execute(array($nameSatellite));
     return $req ->fetchAll();
 }
