@@ -2,7 +2,7 @@
 $infos = $infosSatellites[0]; 
 //$nameSatelitte = $infosSatellites[1];
 $title = $infosSatellites;
-$style = null; 
+$style = null;
 
 ?>
 
