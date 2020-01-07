@@ -7,7 +7,6 @@ require('view/frontend/welcome.php');
 }
 
 function launched(){
-    
     $namesPlanets = getNamePlanets();
     require('view/frontend/launched.php');
 } 
@@ -17,3 +16,7 @@ function planets($namePlanet){
 
 }
 
+function topics(){
+    $namesPhenomenon = getNamePhenomenons();
+    require('view/frontend/launchedInfinimentGrand.php');
+} 

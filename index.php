@@ -6,6 +6,8 @@
             launched();   
         } elseif($_GET['action'] == 'planets'){
             planets($_GET['name']);
+        } elseif($_GET['action'] == 'infinimentGrand'){
+            topics();
         } 
     }else{
 

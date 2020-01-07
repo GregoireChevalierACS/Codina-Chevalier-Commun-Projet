@@ -34,4 +34,9 @@ function getNamePlanets(){
 }
 
 
-
+function getNamePhenomenons(){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT nameOfTopic FROM PhenomenesInfinimentGrand ORDER BY id');
+    $req->execute();
+    return $req ->fetchAll();
+}
