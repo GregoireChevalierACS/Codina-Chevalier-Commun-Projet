@@ -14,7 +14,9 @@
             satellites($_GET['name']);
         } elseif($_GET['action'] == 'infinimentPetit'){
             minisizeTopics();
-        } 
+        } elseif($_GET['action'] == 'particle'){
+            particle($_GET['name']); 
+        }
     }else{
 
         welcome();

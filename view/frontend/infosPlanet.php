@@ -1,6 +1,6 @@
 <?php 
 $infos = $infosArray[0]; 
-$namePlanet = $infosArray[1];
+$namePlanet = $infos[1];
 $title = $namePlanet;
 $style = null; 
 ?>
