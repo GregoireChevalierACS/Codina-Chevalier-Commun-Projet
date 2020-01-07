@@ -28,3 +28,7 @@ function satellites($namesSatellite){
     $infosSatellites = getInfosSatellite($namesSatellite); 
     require('view/frontend/satellites.php');
 }
+function minisizeTopics(){
+ //   $namesPlaceholder = getNamePlaceholder(); //remplacer les placeholders au moment de la création de la db
+    require('view/frontend/launchedInfinimentPetit.php');
+} 
