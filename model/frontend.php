@@ -53,10 +53,17 @@ function getInfosSatellite($nameSatellite){
     $req->execute(array($nameSatellite));
     return $req ->fetchAll();
 } 
-function getNamePlaceholder(){ //remplacer les placeholders au moment de la création de la db
+function getNamesMinisizeTopics(){ 
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT nameOfplaceholder FROM PhenomenesPlaceholder ORDER BY id'); //remplacer les placeholders au moment de la création de la db
+    $req = $db->prepare('SELECT nameParticle FROM PhenomesInfinimentPetit ORDER BY id');
     $db = dbConnect(); 
     $req->execute();
+    return $req ->fetchAll();
+}
+
+function getInfosParticle($nameParticle){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM PhenomesInfinimentPetit  WHERE nameParticle = ? ORDER BY id');
+    $req->execute(array($nameParticle));
     return $req ->fetchAll();
 }

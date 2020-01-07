@@ -29,6 +29,11 @@ function satellites($namesSatellite){
     require('view/frontend/satellites.php');
 }
 function minisizeTopics(){
- //   $namesPlaceholder = getNamePlaceholder(); //remplacer les placeholders au moment de la création de la db
-    require('view/frontend/launchedInfinimentPetit.php');
-} 
+ $namesminisizeTopics = getNamesMinisizeTopics(); 
+require('view/frontend/launchedInfinimentPetit.php');
+}
+
+function particle($nameParticle){
+    $infoParticle = getInfosParticle($nameParticle); 
+    require('view/frontend/particle.php'); 
+}
