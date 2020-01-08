@@ -10,6 +10,8 @@
             topics();
         } elseif($_GET['action'] == 'phenomeneIG'){
             phenomeneIG($_GET['name']);
+        } elseif($_GET['action'] == 'lesGalaxies'){
+            galaxies($_GET['name']);
         }  elseif($_GET['action'] == 'satellites'){
             satellites($_GET['name']);
         } elseif($_GET['action'] == 'infinimentPetit'){

@@ -26,13 +26,22 @@ function topics(){
 
 function phenomeneIG($namePhenomenonIG){
     $infosPhenomeneIG = getInfosPhenomeneIG($namePhenomenonIG);
+    if($namePhenomenonIG == "Les Galaxies"){
+       $nameGalaxies = getNameGalaxies();
+    }
     require('view/frontend/phenomenesIG.php');
+}
+
+function galaxies($nameGalaxie){
+    $infosGalaxies = getInfosGalaxies($nameGalaxie); 
+    require('view/frontend/galaxies.php');
 }
 
 function satellites($namesSatellite){
     $infosSatellites = getInfosSatellite($namesSatellite); 
     require('view/frontend/satellites.php');
 }
+
 function minisizeTopics(){
  $namesminisizeTopics = getNamesMinisizeTopics(); 
 require('view/frontend/launchedInfinimentPetit.php');

@@ -1,6 +1,7 @@
 <?php 
 // var_dump($infosPhenomeneIG);
 $infos = $infosPhenomeneIG[0]; 
+
 $title = $infos[1];
 $style = null;
 ?>
@@ -50,5 +51,15 @@ $style = null;
 </div>
 
 
-<?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php 
+
+if (isset($nameGalaxies)){
+    
+    echo "coucou";
+?>
+    <h3> Quelques Galaxies </h3>
+<?php
+    foreach($nameGalaxies as $name){ ?>
+ <em><a href="index.php?action=lesGalaxies&name=<?=$name['nameOfGalaxy']?>" class="btn btn-primary"> <?=$name['nameOfGalaxy']?> </a></em>
+<?php } ?>
+<?php } ?> 

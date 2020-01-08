@@ -54,6 +54,20 @@ function getInfosPhenomeneIG($namePhenomenonIG){
     return $req ->fetchAll();
 }
 
+function getNameGalaxies(){
+    $db = dbConnect();
+    $req = $db->prepare('SELECT nameOfGalaxy FROM Galaxies ORDER BY id');
+    $req->execute();
+    return $req ->fetchAll();
+}
+
+function getInfosGalaxies($nameGalaxie){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM Galaxies WHERE nameOfGalaxy = ? ORDER BY id');
+    $req->execute(array($nameGalaxie));
+    return $req ->fetchAll();
+} 
+
 function getInfosSatellite($nameSatellite){
     $db = dbConnect(); 
     $req = $db->prepare('SELECT * FROM satellites WHERE nameSatellite = ? ORDER BY id');
