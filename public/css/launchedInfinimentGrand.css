@@ -5,11 +5,29 @@ body{
     align-items: center;
     padding-top: 3vh;
     padding-left: 0.5vw;
-    width: 400vw;
+    width: 570vw;
     height: 100vh;
     background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
     background-size: 100vw 100vh;
     z-index: -2;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    /* scrollbar-width: none; */
+}
+
+.type{
+    padding-left: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boutonRetour{
+    display: flex;background-color: black;
 }
 
 .boutonIG{
@@ -20,8 +38,7 @@ body{
 #LaSondeVoyager{
 
 width: auto;
-height: 10vh;
-padding-left: 15vw;
+height: 10vh; 
 
 }
 
@@ -29,9 +46,7 @@ padding-left: 15vw;
 
     display: flex;
     width: auto;
-    height: 45vh;
-    padding-left: 15vw;
-
+    height: 45vh; 
 }
 
 #Audeladesfrontieres{
@@ -39,7 +54,6 @@ padding-left: 15vw;
     display: flex;
     width: auto;
     height: 25vh;
-    padding-left: 15vw;
 }
 
 #LesGalaxies{
@@ -47,8 +61,6 @@ padding-left: 15vw;
     display: flex;
     width: auto;
     height: 65vh;
-    padding-left: 15vw;
-
 }
 
 #LaGravitationUniverselle{
@@ -56,6 +68,54 @@ padding-left: 15vw;
     display: flex;
     width: auto;
     height: 25vh;
-    padding-left: 15vw;
+}
 
+#LacompositiondelUnivers{
+
+    display: flex;
+    width: auto;
+    height: 25vh;
+}
+
+#LesTrousNoirs{
+
+    display: flex;
+    width: auto;
+    height: 95vh;
+}
+
+#BigBang{
+
+    display: flex;
+    width: auto;
+    height: 30vh;
+}
+
+#LeFondDiffusCosmologique{
+
+    display: flex;
+    width: auto;
+    height: 95vh;
+    opacity: 0.5;
+
+}
+
+#AgeetTailledelUnivers{
+
+    display: flex;
+    width: auto;
+    height: 35vh;
+
+}
+
+#ExpansiondelUnivers{
+
+    display: flex;
+    width: auto;
+    height: 45vh;
+
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
