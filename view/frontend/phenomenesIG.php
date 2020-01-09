@@ -17,6 +17,7 @@ $style = null;
         </h3>
     </div>
     <div class="card-body">
+        
         <p class="card-text">
             À propos : 
             <?php

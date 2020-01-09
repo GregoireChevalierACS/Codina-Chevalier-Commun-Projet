@@ -42,7 +42,7 @@ function getNamesSatellites($namePlanet){
 
 function getNamePhenomenons(){
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT nameOfTopic FROM PhenomenesInfinimentGrand ORDER BY id');
+    $req = $db->prepare('SELECT nameOfTopic, visuel FROM PhenomenesInfinimentGrand ORDER BY id');
     $req->execute();
     return $req ->fetchAll();
 }
