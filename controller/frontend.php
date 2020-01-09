@@ -54,7 +54,7 @@ function particle($nameParticle){
 }
 
 function getNewQuizz(){
-    
+  
    $question= getQuestion($_POST['theme']); 
    $responses = getResponse($question['id']);
    require('view/frontend/quizz.php'); 
