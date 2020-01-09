@@ -14,7 +14,8 @@ function launched(){
 function planets($namePlanet){
     $infosArray = getInfos($namePlanet);
     $namesSatellites = getNamesSatellites($namePlanet); 
-    
+    $question = getQuestion($namePlanet);
+    $responses = getResponse($question['id']); 
     require('view/frontend/infosPlanet.php');
 
 }
@@ -50,4 +51,11 @@ require('view/frontend/launchedInfinimentPetit.php');
 function particle($nameParticle){
     $infoParticle = getInfosParticle($nameParticle); 
     require('view/frontend/particle.php'); 
+}
+
+function getNewQuizz(){
+    
+   $question= getQuestion($_POST['theme']); 
+   $responses = getResponse($question['id']);
+   require('view/frontend/quizz.php'); 
 }

@@ -88,3 +88,19 @@ function getInfosParticle($nameParticle){
     $req->execute(array($nameParticle));
     return $req ->fetchAll();
 }
+
+function getQuestion($theme){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM question WHERE theme = ? ORDER BY id');
+    $req->execute(array($theme));
+    $questions =  $req ->fetchAll();
+    $id = rand(0, (count($questions)-1)); 
+    return $questions[$id];
+}
+
+function getResponse($id){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM reponsePossible WHERE idQuestion = ? ORDER BY id');
+    $req->execute(array($id));
+    return $req ->fetchAll();
+}

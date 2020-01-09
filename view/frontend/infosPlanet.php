@@ -3,6 +3,7 @@ $infos = $infosArray[0];
 $namePlanet = $infos[1];
 $title = $namePlanet;
 $style = null; 
+$script = "public/js/infos.js"; 
 ?>
 
 <?php ob_start(); ?>
@@ -97,9 +98,15 @@ Retour </a></em>
 
 
 </div>
-<?php } ?> 
 
 
+<?php } ?>
+
+<div id = quizz> 
+<?php require('quizz.php')
+?>
+</div> 
+<button id="test"> Fais Pas Chier!! </button>
 
   
 
