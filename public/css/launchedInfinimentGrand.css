@@ -1,0 +1,61 @@
+
+body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 3vh;
+    padding-left: 0.5vw;
+    width: 400vw;
+    height: 100vh;
+    background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
+    background-size: 100vw 100vh;
+    z-index: -2;
+}
+
+.boutonIG{
+    display: flex;
+    height: 30vh;
+}
+
+#LaSondeVoyager{
+
+width: auto;
+height: 10vh;
+padding-left: 15vw;
+
+}
+
+#LesTypesdEtoiles{
+
+    display: flex;
+    width: auto;
+    height: 45vh;
+    padding-left: 15vw;
+
+}
+
+#Audeladesfrontieres{
+
+    display: flex;
+    width: auto;
+    height: 25vh;
+    padding-left: 15vw;
+}
+
+#LesGalaxies{
+
+    display: flex;
+    width: auto;
+    height: 65vh;
+    padding-left: 15vw;
+
+}
+
+#LaGravitationUniverselle{
+
+    display: flex;
+    width: auto;
+    height: 25vh;
+    padding-left: 15vw;
+
+}
