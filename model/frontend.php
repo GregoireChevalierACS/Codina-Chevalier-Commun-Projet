@@ -28,7 +28,7 @@ function getInfos($namePlanet){
 
 function getNamePlanets(){
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT namePlanet FROM Planets ORDER BY id');
+    $req = $db->prepare('SELECT namePlanet, visuel FROM Planets ORDER BY id');
     $req->execute();
     return $req ->fetchAll();
 }

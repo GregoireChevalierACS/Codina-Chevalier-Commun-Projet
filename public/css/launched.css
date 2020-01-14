@@ -27,6 +27,7 @@ body{
     display: flex;
 }
 
+
 .gestionnaireScrollHorizontal{
     display: flex; 
     justify-content: center; 
@@ -85,108 +86,8 @@ body{
     -webkit-transform: rotate(-90deg) translateX(-10vh);
 }
 
-.placeholderClass{
-    display: flex;
-}
-
-#LaSondeVoyager{
-    display: flex;
-width: auto;
-height: 10vh; 
-
-}
-
-#LesTypesdEtoiles{
-
+#Mercure{
     display: flex;
     width: auto;
-    height: 45vh; 
+    height: 15vh; 
 }
-
-#Audeladesfrontieres{
-
-    display: flex;
-    width: auto;
-    height: 25vh;
-}
-
-#LesGalaxies{
-
-    display: flex;
-    width: auto;
-    height: 45vw;
-}
-
-#LaGravitationUniverselle{
-
-    display: flex;
-    width: auto;
-    height: 25vh;
-}
-
-#LacompositiondelUnivers{
-
-    display: flex;
-    width: auto;
-    height: 25vh;
-}
-
-#LesTrousNoirs{
-
-    display: flex;
-    width: auto;
-    height: 45vw;
-}
-
-#BigBang{
-
-    display: flex;
-    width: auto;
-    height: 30vh;
-}
-
-#LeFondDiffusCosmologique{
-
-    display: flex;
-    width: auto;
-    height: 95vh;
-    opacity: 0.5;
-
-}
-
-#AgeetTailledelUnivers{
-
-    display: flex;
-    width: auto;
-    height: 35vh;
-
-}
-
-#ExpansiondelUnivers{
-
-    display: flex;
-    width: auto;
-    height: 45vh;
-
-}
-
-::-webkit-scrollbar{
-    display: none;
-}
-
-.placeholderTitres{
-    color: white;
-}
-
-.titresHorizontaux{
-    color: white;
-    
-}
-
-.titresVerticaux{
-    color: white;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    
-}
-
