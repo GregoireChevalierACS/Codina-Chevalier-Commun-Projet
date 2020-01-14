@@ -11,6 +11,11 @@ function launched(){
     
     require('view/frontend/launched.php');
 } 
+
+function menu(){
+    require('view/frontend/menu.php');
+}
+
 function planets($namePlanet){
     $infosArray = getInfos($namePlanet);
     $namesSatellites = getNamesSatellites($namePlanet); 

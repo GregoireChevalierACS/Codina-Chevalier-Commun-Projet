@@ -1,5 +1,5 @@
 <?php 
-$title = 'Navette en chemin';
+$title = 'Explorez notre Système Solaire';
 $style = 'public/css/launched.css';
 $script = 'public/js/ratioViewport.js';
  ?>
@@ -16,7 +16,7 @@ $script = 'public/js/ratioViewport.js';
 
      <div class ="scroll">
           <p class="boutonRetour">
-          <a href="index.php?action=infinimentPetit">Dans les méandres de la matière</a>
+          <a href="index.php?action=menu">De retour entre les mondes</a>
           </p>
            <?php foreach($namesPlanets as $name){ ?>
                <?php 
@@ -31,7 +31,7 @@ $script = 'public/js/ratioViewport.js';
  <?php } ?> 
 
  <div class="boutonRetour">
- <a href="index.php?action=infinimentGrand">Vers l'infini et au delà</a>
+ <a href="index.php?action=menu">De retour entre les mondes</a>
 </div> 
      </div>
 

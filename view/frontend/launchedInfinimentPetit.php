@@ -4,7 +4,7 @@
  
 <?php ob_start(); ?>
 
-<a href="index.php?action=launch">De retour chez nous</a>
+<a href="index.php?action=menu">De retour entre les mondes</a>
  <div class ="d-flex">
  <?php foreach($namesminisizeTopics as $name){ //placeholder à remplacer au moment de la création de la db de l'infiniment petit ?> 
      

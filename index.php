@@ -6,7 +6,8 @@
             launched();   
         } elseif($_GET['action'] === 'planets'){
             planets($_GET['name']);
-            
+        } elseif($_GET['action'] === 'menu'){
+            menu();
         } elseif($_GET['action'] === 'infinimentGrand'){
             topics();
         } elseif($_GET['action'] === 'phenomeneIG'){

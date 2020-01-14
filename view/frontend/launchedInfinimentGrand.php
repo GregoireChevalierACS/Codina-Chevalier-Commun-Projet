@@ -28,7 +28,7 @@ $script = 'public/js/ratioViewport.js';
       </div>
 </div>
 <div class="boutonRetour">
-<a href="index.php?action=launch">De retour chez nous</a>
+<a href="index.php?action=menu">De retour entre les mondes</a>
 </div>
 </body>
 

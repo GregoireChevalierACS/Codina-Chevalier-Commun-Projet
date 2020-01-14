@@ -6,7 +6,7 @@
 <!-- <em><a class="btn btn-primary">Launch!</a></em> -->
 <div id="wrap"></div>
 <div>
-        <a href="javascript:delay('index.php?action=launch')"><button class="boutonLancement" id="BOUTONLANCEMENT" onclick="launch()" >Launch</button></a>
+        <a href="javascript:delay('index.php?action=menu')"><button class="boutonLancement" id="BOUTONLANCEMENT" onclick="launch()" >Launch</button></a>
 </div>
     <div class="fond">
     
