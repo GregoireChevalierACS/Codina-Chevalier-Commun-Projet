@@ -36,6 +36,7 @@ function quizz(){
       }  
   })
   } 
+  // Gestion parralaxe pour affichage de la planète
   window.addEventListener("scroll", function(event) {
   
     var topDistance = this.pageYOffset;
@@ -51,6 +52,16 @@ function quizz(){
       layer.style.transform = translate3d;
     }
   });
+
+  // Hover IMG pour vaisseau qui décolle
+
+  
+
+
+
+
+
+
 
   quizz(); 
   
