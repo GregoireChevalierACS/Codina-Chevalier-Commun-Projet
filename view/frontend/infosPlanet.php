@@ -106,7 +106,6 @@ Retour </a></em>
 <?php require('quizz.php')
 ?>
 </div> 
-<button id="test"> Fais Pas Chier!! </button>
 
   
 
