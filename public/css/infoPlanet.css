@@ -1,0 +1,123 @@
+body,html{
+   
+    margin: 0;
+    padding: 0;
+    color: white!important;
+    background-image: url('../../Ressources/VisuelsOK/startscreenFondV2.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+/* Placements des infos */
+#containerInfosQuizz{
+    display: flex;
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height:100%; 
+    
+    
+}
+#infos{
+    width:30%;
+    margin:auto;
+    
+}
+.infosPlanet{
+    border:1px solid white!important; 
+    background-color: rgba(255,255,255,0.46);
+    
+    padding: 1vw !important;
+}
+#header_planet img{
+    width:50%;
+}
+
+.category{
+    display: inline-block; 
+    font-weight: bold;
+    padding :0;
+    margin: 0 !important;
+}
+
+#quizz{
+    border:1px solid white!important; 
+    background-color: rgba(255,255,255,0.46);
+    width: 25%;
+    padding: 1vw;
+    position: absolute;
+    top: 30%;
+    margin:auto;
+}
+
+#containerRight{
+    width: 30%;
+    display: flex;
+    margin:auto;
+    
+    
+}
+
+/* Gestion de la parralaxe */
+
+.layer { 
+    background-position: bottom center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    position: fixed;
+    z-index: -1;
+  }
+
+  .layer-1 {
+    background-image: url('../../Ressources/VisuelsOK/mercure.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    z-index:-1;
+    width: 100%;
+    height: 100%;
+    background-position: right center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 640px) {
+    #containerInfosQuizz{
+        display: block;
+        
+    }
+    #infos{
+        width:90%;
+    }
+    .infosPlanet{
+        padding: 2vh!important;
+    }
+
+    #quizz{
+        
+        /* width: 100%; */
+        padding: 1vw;
+        /* height: 20%; */
+        position: relative;
+       
+    }
+    #containerRight{
+        width: 90%; 
+        margin-top: 2vh !important;
+    }
+  }
+
+
+
