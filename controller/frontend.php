@@ -32,6 +32,8 @@ function topics(){
 
 function phenomeneIG($namePhenomenonIG){
     $infosPhenomeneIG = getInfosPhenomeneIG($namePhenomenonIG);
+    $question = getQuestion($namePhenomenonIG);
+    $responses = getResponse($question['id']); 
     if($namePhenomenonIG == "Les Galaxies"){
        $nameGalaxies = getNameGalaxies();
     }
