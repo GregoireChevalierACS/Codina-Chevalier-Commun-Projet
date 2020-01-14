@@ -31,8 +31,8 @@ body{
 .gestionnaireScrollHorizontal{
     display: flex; 
     justify-content: center; 
-    width: 100vw;
-    height: 200vh;
+    width: 112vw;
+    height: 204vh;
     transform: rotate(-90deg) translateX(-110vh);
     -webkit-transform: rotate(-90deg) translateX(-110vh);
     -webkit-transform-origin: top left;
@@ -59,10 +59,10 @@ body{
     display: flex;  
     flex-direction: row;
     width: 100vw;
-    height: 100vh;
-    transform: rotate(90deg) translateY(-100vh);
+    height: 80vh;
+    transform: rotate(90deg) translateY(-90vh);
     transform-origin: top left;
-    -webkit-transform: rotate(90deg) translateY(-100vh);
+    -webkit-transform: rotate(90deg) translateY(-90vh);
     -webkit-transform-origin: top left;
 }
 
@@ -89,5 +89,55 @@ body{
 #Mercure{
     display: flex;
     width: auto;
-    height: 15vh; 
+    height: 12vh; 
 }
+
+#Venus{
+    display: flex;
+    width: auto;
+    height: 20vh; 
+}
+
+#Terre{
+    display: flex;
+    width: auto;
+    height: 22vh;  
+}
+
+#Mars{
+    display: flex;
+    width: auto;
+    height: 17vh;  
+}
+
+#Jupiter{
+    display: flex;
+    width: auto;
+    height: 70vh;  
+}
+
+#Saturne{
+    display: flex;
+    width: auto;
+    height: 88vh;  
+}
+
+#Uranus{
+    display: flex;
+    width: auto;
+    height: 31vh;  
+}
+
+#Neptune{
+    display: flex;
+    width: auto;
+    height: 29vh;  
+}
+
+
+
+
+::-webkit-scrollbar {
+    padding-bottom: 10vh;
+  }
+  
