@@ -12,11 +12,12 @@ $script = 'public/js/ratioViewport.js';
 
 <div class="placeholderViewer">
 
-<p class="boutonRetour">
-<a href="index.php?action=infinimentPetit">Dans les méandres de la matière</a>
-</p>
+
 
      <div class ="scroll">
+          <p class="boutonRetour">
+          <a href="index.php?action=infinimentPetit">Dans les méandres de la matière</a>
+          </p>
            <?php foreach($namesPlanets as $name){ ?>
                <?php 
                     $nom = $name['namePlanet'];
@@ -29,11 +30,11 @@ $script = 'public/js/ratioViewport.js';
                </div>
  <?php } ?> 
 
-     </div>
-
  <div class="boutonRetour">
  <a href="index.php?action=infinimentGrand">Vers l'infini et au delà</a>
 </div> 
+     </div>
+
 </body>
 
 <?php $content = ob_get_clean(); ?>
