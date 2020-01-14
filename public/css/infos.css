@@ -26,14 +26,11 @@ body,html{
     margin:auto;
     
 }
-.infosPlanet{
+.divInfos{
     border:1px solid white!important; 
     background-color: rgba(255,255,255,0.46);
     
     padding: 1.5vw !important;
-}
-#header_planet img{
-    width:50%;
 }
 
 .category{
@@ -75,12 +72,45 @@ body,html{
 
   .layer-1 {
    
-    background-size: auto;
+    
     background-repeat: no-repeat;
+    
     z-index:-1;
     width: 100%;
     height: 100%;
-    background-position: right center;
+    background-position: right;
+}
+/* Gestion taille des planètes à l'échelle */
+#Mercure{
+    background-size: 30%;
+}
+#Venus{
+    background-size: 35%;
+}
+
+#Terre{
+    background-size: 36%;
+}
+#Mars{
+    background-size: 32.5%;
+}
+#Jupiter{
+    background-size: 55%;
+}
+
+#Saturne{
+    background-size: 50%;
+}
+
+#Uranus{
+    background-size: 47%;
+}
+#Neptune{
+    background-size: 47%;
+}
+
+#LesGalaxies{
+    background-size: 55%;
 }
 
 header{
@@ -100,8 +130,6 @@ header{
 
 #retour img{
     width:  100%;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 footer{
