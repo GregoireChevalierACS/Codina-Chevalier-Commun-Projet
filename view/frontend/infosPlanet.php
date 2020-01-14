@@ -7,11 +7,18 @@ $script = "public/js/infos.js";
 ?>
 
 <?php ob_start(); ?>
-<em><a href="index.php?action=launch" class="btn btn-primary">
-        Retour </a></em>
+<header>
+    <div id="retour">
+        <a href="index.php?action=launch"><img src="Ressources/VisuelsOK/startscreenShipV3.png"></a>
+        <p> Retour </p>
+    </div>
 
-<h1><?= $infos['namePlanet'] ?> </h1>
-<div style=" background-image: url('<?=$infos['visuel']?>');" class=" layer layer-1" data-type="parallax" data-depth="0.20"></div>
+
+    <div> <h1><?= $infos['namePlanet'] ?> </h1> </div>
+</header>
+
+<div style=" background-image: url('<?=$infos['visuel']?>');" class=" layer layer-1" data-type="parallax"
+    data-depth="0.20"></div>
 
 <div id="containerInfosQuizz" data-type="parallax" data-depth="0.90">
 
