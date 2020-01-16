@@ -7,22 +7,23 @@ let listeDesElements = document.getElementsByClassName("placeholderClass");
 let listeTitres = document.querySelectorAll(".placeholderTitres");
 
 
-console.log(listeTitres);
+
+
 
 function ratioViewport(){
     if((largeurVue / hauteurVue) > 1){
         ratioHorizontal == (largeurVue / hauteurVue);
-        console.log("écran orienté horizontalement");
+      
     }else if((largeurVue / hauteurVue) <= 1){
         ratioHorizontal == (largeurVue / hauteurVue);
-        console.log("écran orienté verticalement");
+      
     }
 }
 
 
 function adaptationImages(){
     if(ratioHorizontal > 1){
-        console.log(listeDesElements);
+      
         orientation[0].classList.add("gestionnaireScrollHorizontal")
         orientation[0].classList.remove("placeholderViewer");
         for (let i = 0; i < listeDesElements.length; i++){
@@ -30,7 +31,7 @@ function adaptationImages(){
             listeDesElements[i].classList.remove("boutonIGVertical");
             listeDesElements[i].classList.add("boutonIGHorizontal");
         }
-        console.log("les images sont au format horizontal")
+        
     }else if(ratioHorizontal <= 1){
         orientation[0].classList.add("gestionnaireScrollVertical")
         orientation[0].classList.remove("placeholderViewer");
@@ -39,22 +40,57 @@ function adaptationImages(){
             listeDesElements[j].classList.remove("boutonIGHorizontal");
             listeDesElements[j].classList.add("boutonIGVertical");
         }
-        console.log("ici");
+       
         for (let k = 0; k < listeTitres.length; k++){
 
             console.log(listeTitres[k]);
             listeTitres[k].classList.add("titresVerticaux")
             listeTitres[k].classList.remove("placeholderTitres");
         }
-        console.log("les images sont au format vertical");
+        
     }
 }
 
 
 function checkConstant(){
     ratioViewport();
-    console.log(ratioHorizontal);
     adaptationImages();
 }
+
+window.addEventListener('wheel', function(e) {
+    
+    var topDistance = this.pageYOffset;
+    // console.log(e.deltaX);
+    //console.log(e.deltaY);
+
+    var layers = document.querySelectorAll("[data-type='parallax']");
+    for (var i = 0; i < layers.length; i++) {
+      var layer = layers[i];
+      var depth = layer.getAttribute("data-depth");
+      var translate3d = 'translate3d(0, ' + -(topDistance * depth) + 'px, 0)';
+      layer.style['-webkit-transform'] = translate3d;
+      layer.style['-moz-transform'] = translate3d;
+      layer.style['-ms-transform'] = translate3d;	
+      layer.style['-o-transform'] = translate3d;
+      layer.style.transform = translate3d;
+    }
+  });
+
+
+// window.addEventListener("scroll", function(event) {
+//   console.log("je scrolle ça mère");
+//     var topDistance = this.pageYOffset;
+//     var layers = document.querySelectorAll("[data-type='parallax']");
+//     for (var i = 0; i < layers.length; i++) {
+//       var layer = layers[i];
+//       var depth = layer.getAttribute("data-depth");
+//       var translate3d = 'translate3d(0, ' + -(topDistance * depth) + 'px, 0)';
+//       layer.style['-webkit-transform'] = translate3d;
+//       layer.style['-moz-transform'] = translate3d;
+//       layer.style['-ms-transform'] = translate3d;	
+//       layer.style['-o-transform'] = translate3d;
+//       layer.style.transform = translate3d;
+//     }
+//   });
 
 checkConstant();

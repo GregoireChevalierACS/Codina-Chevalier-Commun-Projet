@@ -10,11 +10,14 @@ $script = "public/js/infos.js";
 
 <?php ob_start(); ?>
 <header>
+    
     <div id="retour">
         <a href="index.php?action=infinimentGrand"><img id="shipReturn"
                 src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
         <p> Retour </p>
     </div>
+
+    <div> <h1><?= $infos['nameOfTopic'] ?> </h1> </div>
 </header>
 
 <div style=" background-image: url('<?=$infos['visuel']?>');" class=" layer layer-1" data-type="parallax"

@@ -3,5 +3,5 @@
 <?= $content ?>
 	        
 	
-<?php require('copyright.php') ?> 		
+
 <?php require('footer.php'); ?>

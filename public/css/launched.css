@@ -12,6 +12,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     overflow-y: hidden;
+    overflow-x: hidden;
     /* scrollbar-width: none; */
 }
 
@@ -38,7 +39,6 @@ body{
     -webkit-transform-origin: top left;
     transform-origin: top left;
     overflow-y: scroll;
-    overflow-x: hidden;
     position: absolute;
 }
 
@@ -50,7 +50,6 @@ body{
     transform: translateX(-40vh);
     -webkit-transform: translateX(-40vh);
     overflow-y: scroll;
-    overflow-x: hidden;
     position: absolute;
 }
 
@@ -141,3 +140,15 @@ body{
     padding-bottom: 10vh;
   }
   
+
+
+  #ship{
+      position: fixed; 
+      width: 20vw;
+      height: 20vh;
+      z-index: -1;  
+  }
+
+  #ship img{
+      width: 100%;
+  }

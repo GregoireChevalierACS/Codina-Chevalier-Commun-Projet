@@ -5,6 +5,7 @@ $script = 'public/js/ratioViewport.js';
 
 <?php ob_start(); ?>
 
+<<<<<<< Updated upstream
 <body>
     <div class="placeholderViewer">
 
@@ -34,5 +35,14 @@ $script = 'public/js/ratioViewport.js';
 
 </body>
 
+=======
+<a href="index.php?action=menu">De retour entre les mondes</a>
+ <div class ="d-flex">
+ <?php foreach($namesminisizeTopics as $name){ ?> 
+     
+       <a href="index.php?action=particle&name=<?=$name[0]?>" class="btn btn-primary"> <?=$name[0]?> </a>
+ <?php } ?> 
+</div> 
+>>>>>>> Stashed changes
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

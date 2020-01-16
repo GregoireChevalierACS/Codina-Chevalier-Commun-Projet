@@ -104,3 +104,23 @@ function getResponse($id){
     $req->execute(array($id));
     return $req ->fetchAll();
 }
+
+
+function dbAdminConnect(){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM adminsUsers'); 
+    $req ->execute(); 
+    $id = $req -> fetchAll(); 
+    foreach($id as $value){
+        if($value['user'] === $_POST['user'] && $value['password'] === $_POST['password']){
+            $authentification = true; 
+            break;
+        } else{
+            $authentification = false; 
+
+        }
+    }
+
+    return $authentification; 
+
+}

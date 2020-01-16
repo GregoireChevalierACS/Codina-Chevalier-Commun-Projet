@@ -38,8 +38,9 @@ function quizz(){
   } 
   // Gestion parralaxe pour affichage de la planète
   window.addEventListener("scroll", function(event) {
-  
+    
     var topDistance = this.pageYOffset;
+    
     var layers = document.querySelectorAll("[data-type='parallax']");
     for (var i = 0; i < layers.length; i++) {
       var layer = layers[i];
@@ -52,6 +53,8 @@ function quizz(){
       layer.style.transform = translate3d;
     }
   });
+
+ 
 
   // Hover IMG pour vaisseau qui décolle
   let shipReturn = document.getElementById('shipReturn')
