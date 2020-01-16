@@ -6,7 +6,7 @@ $style = null;
 ?>
 
 <?php ob_start(); ?>
-<em><a href="index.php?action=launch" class="btn btn-primary">
+<em><a href="index.php?action=infinimentPetit" class="btn btn-primary">
 Retour </a></em>
 
 <div class="card  mb-3">

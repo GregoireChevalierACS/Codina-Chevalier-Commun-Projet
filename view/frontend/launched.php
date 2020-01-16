@@ -24,7 +24,7 @@ $script = 'public/js/ratioViewport.js';
                     $concatenation = str_replace(' ', '', $nom);
                ?>
                <div class="type">   
-                    <a href="index.php?action=planets&name=<?=$name['namePlanet']?>">
+                    <a href="index.php?action=planets&name=<?=$nom?>">
                     <img src="<?=$name['visuel'] ?>" class="boutonIG placeholderClass" id="<?= $concatenation ?>">
                     </a>
                </div>

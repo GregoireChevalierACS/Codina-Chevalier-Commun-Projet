@@ -1,0 +1,97 @@
+
+body{
+    display: flex;
+    padding-left: 0.5vw;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
+    background-size: 100vw 100vh;
+    z-index: -2;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    /* scrollbar-width: none; */
+}
+
+.type{
+    padding-left: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholderViewer{
+    display: flex;
+}
+
+
+.gestionnaireScrollHorizontal{
+    display: flex; 
+    justify-content: center; 
+    width: 112vw;
+    height: 210vh;
+    transform: rotate(-90deg) translateX(-110vh);
+    -webkit-transform: rotate(-90deg) translateX(-110vh);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+.gestionnaireScrollVertical{
+    display: flex; 
+    justify-content: center; 
+    width: 180vw;
+    height: 100vh;
+    transform: translateX(-40vh);
+    -webkit-transform: translateX(-40vh);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+.scroll{
+    
+    display: flex;  
+    flex-direction: row;
+    width: 100vw;
+    height: 80vh;
+    transform: rotate(90deg) translateY(-90vh);
+    transform-origin: top left;
+    -webkit-transform: rotate(90deg) translateY(-90vh);
+    -webkit-transform-origin: top left;
+}
+
+
+.boutonRetour{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    z-index: 4;
+}
+
+.boutonIGHorizontal{
+    display: flex;
+    height: 30vh;
+}
+
+.boutonIGVertical{
+    display: flex;
+    height: 30vh;
+    transform: rotate(-90deg) translateX(-10vh);
+    -webkit-transform: rotate(-90deg) translateX(-10vh);
+}
+
+/* #Neutrinoelectrique{
+    display: flex;
+    width: auto;
+    height: 60vh; 
+} */
+
+.disclaimer{
+    color: white;
+}

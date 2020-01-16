@@ -76,7 +76,7 @@ function getInfosSatellite($nameSatellite){
 } 
 function getNamesMinisizeTopics(){ 
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT nameParticle FROM PhenomesInfinimentPetit ORDER BY id');
+    $req = $db->prepare('SELECT nameParticle, visuel FROM PhenomesInfinimentPetit ORDER BY id');
     $db = dbConnect(); 
     $req->execute();
     return $req ->fetchAll();
