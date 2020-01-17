@@ -19,7 +19,7 @@ function dbConnect(){
 function getInfos($namePlanet){
 	$db = dbConnect();
 
-    $req = $db->prepare('SELECT * FROM Planets WHERE namePlanet = ?');
+    $req = $db->prepare('SELECT * FROM Planets WHERE topicName = ?');
     $req->execute(array($namePlanet));
     $infos = $req->fetch();
     $arrayReturn = [$infos, $namePlanet];
@@ -28,7 +28,7 @@ function getInfos($namePlanet){
 
 function getNamePlanets(){
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT namePlanet, visuel FROM Planets ORDER BY id');
+    $req = $db->prepare('SELECT topicName, visuel FROM Planets ORDER BY id');
     $req->execute();
     return $req ->fetchAll();
 }
@@ -42,14 +42,14 @@ function getNamesSatellites($namePlanet){
 
 function getNamePhenomenons(){
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT nameOfTopic, visuel FROM PhenomenesInfinimentGrand ORDER BY id');
+    $req = $db->prepare('SELECT topicName, visuel FROM PhenomenesInfinimentGrand ORDER BY id');
     $req->execute();
     return $req ->fetchAll();
 }
 
 function getInfosPhenomeneIG($namePhenomenonIG){
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT * FROM PhenomenesInfinimentGrand WHERE nameOfTopic = ? ORDER BY id');
+    $req = $db->prepare('SELECT * FROM PhenomenesInfinimentGrand WHERE topicName = ? ORDER BY id');
     $req->execute(array($namePhenomenonIG));
     return $req ->fetchAll();
 }
@@ -76,7 +76,7 @@ function getInfosSatellite($nameSatellite){
 } 
 function getNamesMinisizeTopics(){ 
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT nameParticle, visuel FROM PhenomesInfinimentPetit ORDER BY id');
+    $req = $db->prepare('SELECT topicName, visuel FROM PhenomesInfinimentPetit ORDER BY id');
     $db = dbConnect(); 
     $req->execute();
     return $req ->fetchAll();
@@ -84,7 +84,7 @@ function getNamesMinisizeTopics(){
 
 function getInfosParticle($nameParticle){
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT * FROM PhenomesInfinimentPetit  WHERE nameParticle = ? ORDER BY id');
+    $req = $db->prepare('SELECT * FROM PhenomesInfinimentPetit  WHERE topicName = ? ORDER BY id');
     $req->execute(array($nameParticle));
     return $req ->fetchAll();
 }
@@ -108,19 +108,24 @@ function getResponse($id){
 
 function dbAdminConnect(){
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT * FROM adminsUsers'); 
-    $req ->execute(); 
+    $req = $db->prepare('SELECT * FROM adminsUsers WHERE user = ? AND password = ?   '); 
+    $req ->execute(array($_POST['user'], $_POST['password'])); 
     $id = $req -> fetchAll(); 
-    foreach($id as $value){
-        if($value['user'] === $_POST['user'] && $value['password'] === $_POST['password']){
-            $authentification = true; 
-            break;
-        } else{
-            $authentification = false; 
-
-        }
-    }
-
-    return $authentification; 
+    return $id; 
 
 }
+
+function getAllInfos($theme){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM '.$theme); 
+    $req ->execute(); 
+    return $req -> fetchAll(); 
+}
+
+function modifTopic($nomSujet, $nomTable){
+    $db = dbConnect();
+    $req = $db->prepare("SELECT * FROM $nomTable WHERE topicName = ?"); 
+    $req ->execute(array($nomSujet));
+    return $req -> fetchAll(); 
+}
+

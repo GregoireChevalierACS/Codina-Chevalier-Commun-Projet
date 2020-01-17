@@ -1,10 +1,23 @@
-<?php ob_start(); ?>
+<?php 
+$title = "Identification Administrateur";
+$style = "public/css/identification.css"; 
+$script = "";
 
-<form action="admin.php?action=connect" method="post">
- <p>Votre nom : <input type="text" name="user" /></p>
- <p>Votre MDP : <input type="password" name="password" /></p>
- <p><input type="submit" value="OK"></p>
-</form>
+ob_start(); ?>
+<div>
+    <div>
+        <h1> Bienvenue sur votre espace d'administration </h1>
+    </div>
+
+
+    <div id="form">
+        <form action="admin.php?action=connect" method="post">
+            <p>Votre nom : <input type="text" name="user" /></p>
+            <p>Votre MDP : <input type="password" name="password" /></p>
+            <p><input type="submit" value="OK"></p>
+        </form>
+    </div>
+</div>
 
 
 

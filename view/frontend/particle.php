@@ -7,30 +7,20 @@ $script = "public/js/infos.js";
 ?>
 
 <?php ob_start(); ?>
-<<<<<<< Updated upstream
-<em><a href="index.php?action=infinimentPetit" class="btn btn-primary">
-Retour </a></em>
 
-<div class="card  mb-3">
-    <div  class="card-header">
-        <h3>
-            <?php echo htmlspecialchars($nameParticle); ?>
-            <p><small> Découverte le <?php echo $infos['discovery_date']; ?></small></p>
-        </h3>
-=======
 <header>
     <div id="retour">
         <a href="index.php?action=infinimentPetit"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
         <p> Retour </p>
->>>>>>> Stashed changes
+
     </div>
 
 
-    <div> <h1><?= $infos['nameParticle'] ?> </h1> </div>
+    <div> <h1><?= $infos['topicName'] ?> </h1> </div>
 </header>
 
 <div style=" background-image: url('');" class=" layer layer-1" data-type="parallax"
-    data-depth="0.20" id="<?=$infos['namePlanet']?>"></div>
+    data-depth="0.20" id="<?=$infos['topicName']?>"></div>
 
     <div id="infos">
         <div class=" divInfos">

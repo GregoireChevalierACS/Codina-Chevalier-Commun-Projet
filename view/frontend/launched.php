@@ -20,18 +20,12 @@ $script = 'public/js/ratioViewport.js';
                 </p>
                 <?php foreach($namesPlanets as $name){ ?>
                 <?php 
-                    $nom = $name['namePlanet'];
+                    $nom = $name['topicName'];
                     $concatenation = str_replace(' ', '', $nom);
                ?>
-<<<<<<< Updated upstream
                <div class="type">   
                     <a href="index.php?action=planets&name=<?=$nom?>">
                     <img src="<?=$name['visuel'] ?>" class="boutonIG placeholderClass" id="<?= $concatenation ?>">
-=======
-                <div class="type">
-                    <a href="index.php?action=planets&name=<?=$name['namePlanet']?>">
-                        <img src="<?=$name['visuel'] ?>" class="boutonIG placeholderClass" id="<?= $concatenation ?>">
->>>>>>> Stashed changes
                     </a>
                 </div>
                 <?php } ?>

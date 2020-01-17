@@ -1,0 +1,28 @@
+body{
+    
+    padding-left: 0.5vw;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
+    background-size: 100vw 100vh;
+    color: white;
+    /* display: flex; 
+    justify-content: center;
+    align-items: center; */
+}
+p{
+    color: white;
+}
+h1{
+    color: white;
+    padding: 1vw;
+}
+
+form{
+
+    background-color:rgba(255, 255, 255, 0.466);
+    display: flex;
+    justify-content: center;
+    
+
+}

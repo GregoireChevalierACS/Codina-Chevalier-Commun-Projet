@@ -17,11 +17,11 @@ $script = "public/js/infos.js";
         <p> Retour </p>
     </div>
 
-    <div> <h1><?= $infos['nameOfTopic'] ?> </h1> </div>
+    <div> <h1><?= $infos['topicName'] ?> </h1> </div>
 </header>
 
 <div style=" background-image: url('<?=$infos['visuel']?>');" class=" layer layer-1" data-type="parallax"
-    data-depth="0.20" id="<?php echo str_replace(' ', '', $infos{'nameOfTopic'})?>"></div>
+    data-depth="0.20" id="<?php echo str_replace(' ', '', $infos{'topicName'})?>"></div>
 
 <div id="containerInfosQuizz" data-type="parallax" data-depth="0.90">
 

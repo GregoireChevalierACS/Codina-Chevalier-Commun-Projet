@@ -15,12 +15,12 @@ $script = 'public/js/ratioViewport.js';
       <div class="scroll">
             <?php foreach($namesPhenomenon as $name){ ?>
                   <?php 
-                        $nom = $name['nameOfTopic'];
+                        $nom = $name['topicName'];
                         $concatenation = str_replace(' ', '', $nom);
                   ?>
                   <div class="type">
-                        <div class="placeholderTitres"><?=$name['nameOfTopic']?></div>
-                        <a href="index.php?action=phenomeneIG&name=<?=$name['nameOfTopic']?>">
+                        <div class="placeholderTitres"><?=$name['topicName']?></div>
+                        <a href="index.php?action=phenomeneIG&name=<?=$name['topicName']?>">
                         <img src="<?=$name['visuel'] ?>" class="boutonIG placeholderClass" id="<?= $concatenation ?>">
                         </a>
                   </div>
