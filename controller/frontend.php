@@ -64,5 +64,6 @@ function getNewQuizz(){
   
    $question= getQuestion($_POST['theme']); 
    $responses = getResponse($question['id']);
+   $lastGoodResponse = getLastGoodResponse($_POST['idGoodReponse']);
    require('view/frontend/quizz.php'); 
 }

@@ -1,9 +1,9 @@
-<?php 
+<?php
 $title = "Identification Administrateur";
-$style = "public/css/identification.css"; 
+$style = "public/css/identification.css";
 $script = "";
 
-ob_start(); ?>
+ob_start();?>
 <div>
     <div>
         <h1> Bienvenue sur votre espace d'administration </h1>
@@ -21,5 +21,5 @@ ob_start(); ?>
 
 
 
-<?php $content = ob_get_clean(); ?>
-<?php require('view/frontend/template.php'); ?>
+<?php $content = ob_get_clean();?>
+<?php require 'view/frontend/template.php';?>

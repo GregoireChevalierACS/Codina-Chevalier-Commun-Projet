@@ -105,6 +105,14 @@ function getResponse($id){
     return $req ->fetchAll();
 }
 
+function getLastGoodResponse($id){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT reponse FROM reponsePossible WHERE id = ? ');
+    $req-> execute(array($id)); 
+    $goodResponse = $req -> fetch();
+    return $goodResponse['reponse'] ;  
+}
+
 
 function dbAdminConnect(){
     $db = dbConnect(); 
@@ -122,10 +130,45 @@ function getAllInfos($theme){
     return $req -> fetchAll(); 
 }
 
-function modifTopic($nomSujet, $nomTable){
+function modifTopic($id, $nomTable){
     $db = dbConnect();
-    $req = $db->prepare("SELECT * FROM $nomTable WHERE topicName = ?"); 
-    $req ->execute(array($nomSujet));
+    $req = $db->prepare("SELECT * FROM $nomTable WHERE id = ?"); 
+    $req ->execute(array($id));
     return $req -> fetchAll(); 
 }
 
+function patternTable($table){
+    $db = dbConnect(); 
+    $req = $db->prepare("SHOW COLUMNS FROM $table"); 
+    $req -> execute(); 
+    return $req -> fetchAll();
+}
+
+function infosToAdd($table){
+    $db = dbConnect(); 
+    $columns = implode(",", array_keys($_POST['ajout'])); 
+    $values = implode(",", array_map(function(){
+        return "?";
+    }, array_keys($_POST['ajout'] ))); 
+
+
+    
+    $req = $db->prepare("INSERT INTO $table ($columns) VALUES ($values)");
+    $req -> execute(array_values($_POST['ajout'])); 
+    
+
+
+}
+
+
+
+function donneesModifieesPlanets(){
+ 
+    $db = dbConnect(); 
+
+    $req = $db -> prepare("UPDATE Planets SET topicName = ?, distance_to_sun = ?, type = ?, orbital_period = ?, rotation_period = ?, temperature = ?, diameter = ?, mass = ?, gravity =?, composition = ?, satellites =?, fun_fact = ? , discovery_date = ?, visuel = ? WHERE id= ?");
+
+    $req -> execute(array($_POST['topicName'],$_POST['distance_to_sun'],$_POST['type'],$_POST['orbital_period'],$_POST['rotation_period'],$_POST['temperature'],$_POST['diameter'],$_POST['mass'],$_POST['gravity'],$_POST['composition'],$_POST['satellites'],$_POST['fun_fact'],$_POST['discovery_date'],$_POST['visuel'],$_POST['idTopic']));
+
+    }
+   
