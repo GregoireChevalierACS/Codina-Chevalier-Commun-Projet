@@ -20,6 +20,10 @@ if (isset($_GET['action'])) {
         ajout($_GET['name']); 
     } elseif($_GET['action'] == 'ajoute'){
         infosAjoutees($_GET['table']);
+    } elseif($_GET['action'] == 'profil'){
+        profil();
+    }elseif($_GET['action'] == 'changePass'){
+        changePass();
     }
 } else {
     interfaceAdmin();

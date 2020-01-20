@@ -123,6 +123,20 @@ function dbAdminConnect(){
 
 }
 
+function getInfosProfil(){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM adminsUsers WHERE user = ? '); 
+    $req ->execute(array($_SESSION['user'])); 
+    $infos = $req -> fetchAll(); 
+    return $infos; 
+}
+
+function updatePass(){
+    $db = dbConnect(); 
+    $req = $db->prepare('UPDATE adminsUsers SET password = ?   WHERE user = ? '); 
+    $req ->execute(array($_POST['password'],$_SESSION['user'])); 
+     }
+
 function getAllInfos($theme){
     $db = dbConnect(); 
     $req = $db->prepare('SELECT * FROM '.$theme); 

@@ -42,6 +42,7 @@ function formType($type,$nameInput, $content){
 
 ob_start(); ?>
 <div class="container">
+    <a class="btn btn-primary" href ="admin.php"> Retour </a> 
     <h1 class="text-center"> Modification du sujet : <?=$sujetModified[0]['topicName']?></h1>
     <form action="admin.php?action=modifiedTopic" method="post">
 

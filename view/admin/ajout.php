@@ -1,6 +1,6 @@
 <?php
-$title = "Identification Administrateur";
-$style = "";
+$title = "Ajouter une entrée";
+$style = "public/css/modifSujet.css";
 $script = "";
 
 
@@ -41,6 +41,7 @@ function formType($type,$nameInput){
 
 ob_start();?>
 <div class="container">
+<a class="btn btn-primary" href ="admin.php">Retour</a> 
     <div>
         <h1> Ajout un sujet à la table :<?= $table ?></h1>
     </div>
