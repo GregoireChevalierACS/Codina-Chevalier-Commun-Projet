@@ -13,12 +13,14 @@ function connect()
 
     if (isset($_GET['action']) && $_GET['action'] === 'connect') {
         $id = dbAdminConnect();
+       
     } else {
         $id = null;
     }
 
     if (!empty($id)) {
         $_SESSION['authentifie'] = true;
+        $_SESSION['user'] = $_POST['user'];
         header("Location: admin.php");
         exit();
     } else {
@@ -84,4 +86,14 @@ function infosAjoutees($table){
     exit();
 
 
+}
+
+function profil(){
+    $infosProfil = getInfosProfil();
+    require('view/admin/profil.php'); 
+}
+
+function changePass(){
+    updatePass(); 
+    echo 'Tout va bien';
 }
