@@ -1,40 +1,87 @@
-<?php 
-require('model/frontend.php');
+<?php
+require 'model/frontend.php';
 
-function identification(){
+function identification()
+{
 
-require ('view/admin/identification.php');
+    require 'view/admin/identification.php';
 
 }
 
-function connect(){
-    $id = dbAdminConnect(); 
-  
-    
-    if (!empty($id)){
-        $planetDB = getAllInfos("Planets"); 
-        $iPDB = getAllInfos("PhenomesInfinimentPetit");
-        $iGDB = getAllInfos("PhenomenesInfinimentGrand");
-        $themes = [
-            "Planets" => $planetDB,
-            "PhenomesInfinimentPetit"=> $iPDB, 
-            "PhenomenesInfinimentGrand" => $iGDB
-        ]; 
-        require('view/admin/interfaceAdmin.php'); 
+function connect()
+{
 
-    }else{
-        
-        identification(); 
+    if (isset($_GET['action']) && $_GET['action'] === 'connect') {
+        $id = dbAdminConnect();
+    } else {
+        $id = null;
     }
 
+    if (!empty($id)) {
+        $_SESSION['authentifie'] = true;
+        header("Location: admin.php");
+        exit();
+    } else {
+        identification();
+        die();
+    }
 
+}
 
+function logout()
+{
 
+    unset($_SESSION['authentifie']);
+    header("Location: admin.php");
+    exit();
+}
+
+function interfaceAdmin()
+{
+
+    $planetDB = getAllInfos("Planets");
+    $iPDB = getAllInfos("PhenomesInfinimentPetit");
+    $iGDB = getAllInfos("PhenomenesInfinimentGrand");
+    $themes = [
+        "Planets" => $planetDB,
+        "PhenomesInfinimentPetit" => $iPDB,
+        "PhenomenesInfinimentGrand" => $iGDB,
+    ];
+    require 'view/admin/interfaceAdmin.php';
+
+}
+
+function modification($id, $nomTable)
+{
+    $sujetModified = modifTopic($id, $nomTable);
+    require 'view/admin/modification.php';
+}
+
+function infosModifiees($tables)
+{
+
+    if ($tables == "Planets") {
+        donneesModifieesPlanets();
+
+    } elseif ($tables == "PhenomesInfinimentPetit") {
+        donneesModifieesIP();
+    } else if ($tables == "PhenomenesInfinimentGrand") {
+        donneesModifieesIG();
+    }
+
+}
+
+function ajout($table){
+    $columns = patternTable($table); 
+    require('view/admin/ajout.php'); 
 
 
 }
 
-function modification($nomSujet, $nomTable){
-    $sujetModified = modifTopic($nomSujet, $nomTable);
-    require('view/admin/modification.php');
+function infosAjoutees($table){
+   infosToAdd($table); 
+   header("Location: admin.php");
+    exit();
+
+
 }

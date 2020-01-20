@@ -1,16 +1,26 @@
 <?php
+session_start();
+require 'controller/admin.php';
 
-    require('controller/admin.php');
-    
-    if(isset($_GET['action'])){
-        if($_GET['action'] === 'connect'){
-            connect();
-        }else if($_GET['action'] === 'modif'){
-            modification($_GET['name'], $_GET['table']);
-        }else if($_GET['action'] === 'modifiedTopic'){
-           print_r($_POST);
-        }
-    } else{
+if (empty($_SESSION['authentifie'])) {
+    connect();
 
-        identification(); 
+}
+
+
+if (isset($_GET['action'])) {
+
+    if ($_GET['action'] === 'modif') {
+        modification($_GET['id'], $_GET['table']);
+    } else if ($_GET['action'] === 'modifiedTopic') {
+        infosModifiees($_POST['nameTable']);
+    } elseif ($_GET['action'] === 'logout') {
+        logout();
+    } elseif($_GET['action'] =='ajout'){
+        ajout($_GET['name']); 
+    } elseif($_GET['action'] == 'ajoute'){
+        infosAjoutees($_GET['table']);
     }
+} else {
+    interfaceAdmin();
+}

@@ -1,13 +1,23 @@
-<?php 
+<?php
+if (!isset($_SESSION['scoreQuizz'])){
+    $_SESSION['scoreQuizz'] = 0;
+    $_SESSION['numberQuestion'] = 0;  
+} 
+
 if (!empty($_POST)){
+    
+    $_SESSION['numberQuestion']++;
   
-   if($_POST['idGoodReponse'] === $_POST['reponse']){ ?>
+   if($_POST['idGoodReponse'] === $_POST['reponse']){
+       $_SESSION['scoreQuizz']++ ?>
 <div class=" alert alert-success" role="alert">
-    Bonne réponse
+    
+    Bonne réponse. <?= $_SESSION['scoreQuizz']?> / <?= $_SESSION['numberQuestion'] ?>
 </div>
 <?php }else{ ?>
 <div class=" alert alert-danger" role="alert">
-    Mauvaise réponse.
+    Mauvaise réponse. <?= $_SESSION['scoreQuizz']?> / <?= $_SESSION['numberQuestion'] ?>
+    La bonne réponse était: <?= $lastGoodResponse ?>
 </div>
 <?php } 
 }
