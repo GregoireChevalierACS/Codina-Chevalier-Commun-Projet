@@ -18,6 +18,8 @@ if (isset($_GET['action'])) {
         logout();
     } elseif($_GET['action'] =='ajout'){
         ajout($_GET['name']); 
+    } elseif($_GET['action'] =='suppression'){
+        suppr($_GET['id'], $_GET['table']); 
     } elseif($_GET['action'] == 'ajoute'){
         infosAjoutees($_GET['table']);
     } elseif($_GET['action'] == 'profil'){

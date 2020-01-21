@@ -21,9 +21,8 @@ foreach($themes as $key => $themeBoucle){ ?>
 foreach ($themeBoucle as $sujet){ ?> 
             <div>
                 <h3><?= $sujet['topicName'] ?></h3>
-                <a href="admin.php?action=modif&id=<?= $sujet['id']?>&table=<?=$key?>"> <button type="button"
-                        class="btn btn-primary">Modifier</button></a>
-                <button type="button" class="btn btn-danger">Supprimer</button>
+                <a href="admin.php?action=modif&id=<?= $sujet['id']?>&table=<?=$key?>"><button type="button" class="btn btn-primary">Modifier</button></a>
+                <a href="admin.php?action=suppression&id=<?= $sujet['id']?>&table=<?=$key?>"><button type="button" class="btn btn-danger">Supprimer</button>
             </div>
 
             <?php } ?>
