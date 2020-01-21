@@ -151,6 +151,13 @@ function modifTopic($id, $nomTable){
     return $req -> fetchAll(); 
 }
 
+function supprTopic($id, $nomTable){
+    $db = dbConnect();
+    $req = $db->prepare("DELETE FROM $nomTable WHERE id = ?"); 
+    $req ->execute(array($id));
+    return $req -> fetchAll(); 
+}
+
 function patternTable($table){
     $db = dbConnect(); 
     $req = $db->prepare("SHOW COLUMNS FROM $table"); 
@@ -186,3 +193,14 @@ function donneesModifieesPlanets(){
 
     }
    
+function donneesModifieesIP(){
+    $db = dbConnect(); 
+    $req = $db -> prepare("UPDATE PhenomesInfinimentPetit SET topicName = ?, type = ?, typeSecondary = ?, description = ?, discovery_date = ?, visuel = ? WHERE id= ?");
+    $req -> execute(array($_POST['topicName'],$_POST['type'],$_POST['typeSecondary'],$_POST['description'],$_POST['discovery_date'],$_POST['visuel'],$_POST['idTopic']));
+}
+
+function donneesModifieesIG(){
+    $db = dbConnect(); 
+    $req = $db -> prepare("UPDATE PhenomenesInfinimentGrand SET topicName = ?, subjectDescription = ?, history = ?, dimensions = ?, composition = ?, peopleRelatedTo = ?, visuel = ?, funFactEtLiens = ? WHERE id= ?");
+    $req -> execute(array($_POST['topicName'],$_POST['subjectDescription'],$_POST['history'],$_POST['dimensions'],$_POST['composition'],$_POST['peopleRelatedTo'],$_POST['visuel'],$_POST['funFactEtLiens'],$_POST['idTopic']));
+}

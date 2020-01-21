@@ -80,6 +80,11 @@ function ajout($table){
 
 }
 
+function suppr($id, $nomTable){
+    $sujetDeleted = supprTopic($id, $nomTable);
+    require 'view/admin/suppression.php';
+}
+
 function infosAjoutees($table){
    infosToAdd($table); 
    header("Location: admin.php");
