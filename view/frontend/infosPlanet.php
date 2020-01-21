@@ -1,12 +1,16 @@
 <?php 
+
+
 $infos = $infosArray[0]; 
 $namePlanet = $infos[1];
 $title = $namePlanet;
 $style = "public/css/infos.css"; 
 $script = "public/js/infos.js"; 
+require ('view/achievement.php');
 ?>
 
 <?php ob_start(); ?>
+
 <header>
     <div id="retour">
         <a href="index.php?action=launch"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
@@ -14,8 +18,21 @@ $script = "public/js/infos.js";
     </div>
 
 
-    <div> <h1><?= $infos['topicName'] ?> </h1> </div>
+    <div>
+        <h1><?= $infos['topicName'] ?> </h1>
+    </div>
+
+    <?php 
+if(isset($affichagePlanet) && $affichagePlanet){
+    $affichagePlanet = false; 
+  ?>
+  
+<div class=" alert alert-success" role="alert">
+Première planete visitée
+</div>
+<?php } ?>
 </header>
+
 
 <div style=" background-image: url('<?=$infos['visuel']?>');" class=" layer layer-1" data-type="parallax"
     data-depth="0.20" id="<?=$infos['topicName']?>"></div>

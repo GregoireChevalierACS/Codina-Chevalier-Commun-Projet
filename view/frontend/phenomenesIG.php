@@ -4,7 +4,8 @@ $infos = $infosPhenomeneIG[0];
 
 $title = $infos[1];
 $style = "public/css/infos.css"; 
-$script = "public/js/infos.js"; 
+$script = "public/js/infos.js";
+require ('view/achievement.php'); 
 ?>
 
 
@@ -18,6 +19,16 @@ $script = "public/js/infos.js";
     </div>
 
     <div> <h1><?= $infos['topicName'] ?> </h1> </div>
+
+    <?php 
+if(isset($affichagephenomeneIG) && $affichagephenomeneIG){
+    $affichagephenomeneIG = false; 
+  ?>
+  
+<div class=" alert alert-success" role="alert">
+Grand explorateur
+</div>
+<?php } ?>
 </header>
 
 <div style=" background-image: url('<?=$infos['visuel']?>');" class=" layer layer-1" data-type="parallax"

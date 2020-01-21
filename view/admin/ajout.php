@@ -11,7 +11,7 @@ function formType($type,$nameInput){
         ob_start(); ?>
 <div class="form-group">
     <label><?= $nameInput?></label>
-    <input type="number" name="ajout[<?=$nameInput?>]" class="form-control"> </input>
+    <input type="number" name="ajout[<?=$nameInput?>]" class="form-control" required> </input>
 </div>
 
 <?php $formInput =  ob_get_clean();
@@ -20,7 +20,7 @@ function formType($type,$nameInput){
         ob_start(); ?>
 <div class="form-group">
     <label><?= $nameInput?></label>
-    <textarea name="ajout[<?=$nameInput?>]" class="form-control" id="exampleFormControlTextarea1" rows="3"> </textarea>
+    <textarea name="ajout[<?=$nameInput?>]" class="form-control" id="exampleFormControlTextarea1" rows="3" required> </textarea>
 </div>
 
 <?php $formInput =  ob_get_clean();
@@ -29,7 +29,7 @@ function formType($type,$nameInput){
         ob_start(); ?>
 <div class="form-group">
     <label><?= $nameInput?></label>
-    <input type="number" step="0.01" name="ajout[<?=$nameInput?>]" class="form-control"> </input>
+    <input type="number" step="0.01" name="ajout[<?=$nameInput?>]" class="form-control" required> </input>
 </div>
 
 <?php $formInput =  ob_get_clean();

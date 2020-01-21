@@ -21,6 +21,13 @@ function planets($namePlanet){
     $namesSatellites = getNamesSatellites($namePlanet); 
     $question = getQuestion($namePlanet);
     $responses = getResponse($question['id']); 
+    if(!isset($_COOKIE['planet'])){
+        setcookie('planet', 'planet');
+        $_COOKIE['planet'] = false;
+        
+    }
+
+
     require('view/frontend/infosPlanet.php');
 
 }
@@ -37,6 +44,11 @@ function phenomeneIG($namePhenomenonIG){
     if($namePhenomenonIG == "Les Galaxies"){
        $nameGalaxies = getNameGalaxies();
     }
+    if(!isset($_COOKIE['phenomeneIG'])){
+        setcookie('phenomeneIG', 'phenomeneIG');
+        $_COOKIE['phenomeneIG'] = false;
+        
+    } 
     require('view/frontend/phenomenesIG.php');
 }
 
@@ -56,12 +68,23 @@ require('view/frontend/launchedInfinimentPetit.php');
 }
 
 function particle($nameParticle){
-    $infoParticle = getInfosParticle($nameParticle); 
+    $infoParticle = getInfosParticle($nameParticle);
+    if(!isset($_COOKIE['particle'])){
+        setcookie('particle', 'particle');
+        $_COOKIE['particle'] = false;
+        
+    } 
     require('view/frontend/particle.php'); 
 }
 
 function getNewQuizz(){
-  
+    print_r($_POST['theme']);
+    die();
+    if(!isset($_COOKIE[$_POST['theme']])){
+        setcookie($_POST['theme'], $_POST['theme']);
+        $_COOKIE[$_POST['theme']] = false;
+        
+    } 
    $question= getQuestion($_POST['theme']); 
    $responses = getResponse($question['id']);
    $lastGoodResponse = getLastGoodResponse($_POST['idGoodReponse']);

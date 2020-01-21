@@ -11,7 +11,7 @@ ob_start(); ?>
             <form  id ="form" action="admin.php?action=changePass">
                 <div class="form-group">
                     <label>Changer son mot de passe </label>
-                    <input id="pass" type="password" name= "password" class="form-control"> </input>
+                    <input id="pass" type="password" name= "password" class="form-control" required> </input>
                 </div>
                 <button type="submit" class="btn btn-primary">Valider</button>
             </form>
