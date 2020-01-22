@@ -113,6 +113,16 @@ function getLastGoodResponse($id){
     return $goodResponse['reponse'] ;  
 }
 
+function getTag(){
+    $db = dbConnect(); 
+    $req = $db->prepare('SELECT * FROM tag');
+    $req-> execute(); 
+    return  $req -> fetchAll();
+}
+
+
+//  MODEL ADMIN
+
 
 function dbAdminConnect(){
     $db = dbConnect(); 

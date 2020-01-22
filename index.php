@@ -23,6 +23,8 @@ session_start();
             particle($_GET['name']); 
         } elseif($_GET['action'] === 'response'){
             getNewQuizz();
+        }elseif($_GET['action'] === 'tag'){
+           tag();
         }
     }else{
 

@@ -4,27 +4,41 @@ $namePlanet = $infos[1];
 $title = $namePlanet;
 $style = "public/css/infos.css"; 
 $script = "public/js/infos.js"; 
+require ('view/achievement.php');
 ?>
 
 <?php ob_start(); ?>
-<header>
+
+
+<header class="mb-5">
+<h1 class="text-center"><?= $infos['topicName'] ?> </h1>
     <div id="retour">
         <a href="index.php?action=launch"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
         <p> Retour </p>
     </div>
-
-
-    <div> <h1><?= $infos['topicName'] ?> </h1> </div>
 </header>
+
+<?php 
+ if(isset($affichagePlanet) && $affichagePlanet){
+     $affichagePlanet = false; 
+  ?>
+  
+  <div class=" d-flex alert alert-success alert-dismissible" id="achievement">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+   Première planète visitée 
+</div>
+<?php } ?>
+
 
 <div style=" background-image: url('<?=$infos['visuel']?>');" class=" layer layer-1" data-type="parallax"
     data-depth="0.20" id="<?=$infos['topicName']?>"></div>
 
-<div id="containerInfosQuizz" data-type="parallax" data-depth="0.90">
+<div  id="containerInfosQuizz" data-type="parallax" data-depth="0.90">
 
 
 
-    <div id="infos">
+    <div id="infos" class="mb-5">
+  
         <div class=" divInfos">
             <p class="category"> Distance du soleil: </p>
             <?php echo nl2br(htmlspecialchars($infos['distance_to_sun'])); ?>

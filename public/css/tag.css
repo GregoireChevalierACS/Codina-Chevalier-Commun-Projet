@@ -1,0 +1,19 @@
+body,html{
+   
+    margin: 0;
+    padding: 0;
+    color: white!important;
+    background-image: url('../../Ressources/VisuelsOK/startscreenFondV2.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.desactive{
+    
+    -webkit-filter: grayscale(100%); /* Pour les navigateurs Chrome, Safari, Opera */
+    filter: grayscale(100%); /* Firefox */
+
+
+}

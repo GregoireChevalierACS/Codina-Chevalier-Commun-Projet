@@ -4,6 +4,7 @@ $nameParticle = $infos[1];
 $title = $nameParticle;
 $style = "public/css/infos.css"; 
 $script = "public/js/infos.js";
+require ('view/achievement.php');
 ?>
 
 <?php ob_start(); ?>
@@ -17,6 +18,16 @@ $script = "public/js/infos.js";
 
 
     <div> <h1><?= $infos['topicName'] ?> </h1> </div>
+
+    <?php 
+if(isset($affichageParticle) && $affichageParticle){
+    $affichageParticle = false; 
+  ?>
+  
+<div class=" alert alert-success" role="alert">
+Elémentaire mon cher Watson
+</div>
+<?php } ?>
 </header>
 
 <div style=" background-image: url('');" class=" layer layer-1" data-type="parallax"
