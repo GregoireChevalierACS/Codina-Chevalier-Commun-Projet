@@ -76,13 +76,18 @@ function infosModifiees($tables)
 function ajout($table){
     $columns = patternTable($table); 
     require('view/admin/ajout.php'); 
+}
 
-
+function confirm($id, $nomTable){
+    $idToDelete = $id;
+    $tableToDelete = $nomTable;
+    require('view/admin/suppression.php');
 }
 
 function suppr($id, $nomTable){
     $sujetDeleted = supprTopic($id, $nomTable);
-    require 'view/admin/suppression.php';
+    header("Location: admin.php");
+    exit();
 }
 
 function infosAjoutees($table){

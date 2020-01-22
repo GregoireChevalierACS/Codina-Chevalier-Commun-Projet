@@ -1,31 +1,39 @@
-
 let hauteurVue = window.innerHeight;
 let largeurVue = window.innerWidth;
 let ratioHorizontal = largeurVue / hauteurVue;
+
 let orientation = document.getElementsByClassName("placeholderViewer");
 let listeDesElements = document.getElementsByClassName("placeholderClass");
 let listeTitres = document.querySelectorAll(".placeholderTitres");
-
+let intervalleCheckViewport = window.setInterval(checkConstant, 100);
 
 
 
 
 function ratioViewport() {
+    
+hauteurVue = window.innerHeight;
+largeurVue = window.innerWidth;
+ratioHorizontal = largeurVue / hauteurVue;
+
     if ((largeurVue / hauteurVue) > 1) {
         ratioHorizontal == (largeurVue / hauteurVue);
-
+      //  console.log(ratioHorizontal);
     } else if ((largeurVue / hauteurVue) <= 1) {
         ratioHorizontal == (largeurVue / hauteurVue);
-
+       // console.log(ratioHorizontal);
     }
 }
 
 
 function adaptationImages() {
     if (ratioHorizontal > 1) {
-
-        orientation[0].classList.add("gestionnaireScrollHorizontal")
-        orientation[0].classList.remove("placeholderViewer");
+        console.log(ratioHorizontal);
+        if(orientation[0] != undefined){
+            orientation[0].classList.remove("gestionnaireScrollVertical");
+            orientation[0].classList.add("gestionnaireScrollHorizontal")
+            orientation[0].classList.remove("placeholderViewer2");
+        }
         for (let i = 0; i < listeDesElements.length; i++) {
             listeDesElements[i].classList.remove("boutonIG");
             listeDesElements[i].classList.remove("boutonIGVertical");
@@ -33,9 +41,13 @@ function adaptationImages() {
         }
 
     } else if (ratioHorizontal <= 1) {
-        orientation[0].classList.add("gestionnaireScrollVertical")
-        orientation[0].classList.remove("placeholderViewer");
+        console.log(ratioHorizontal);
+        if(orientation[0] != undefined){
+            orientation[0].classList.remove("gestionnaireScrollHorizontal");
+            orientation[0].classList.add("gestionnaireScrollVertical")
+            orientation[0].classList.remove("placeholderViewer2");}
         for (let j = 0; j < listeDesElements.length; j++) {
+           // console.log("wsh mamene");
             listeDesElements[j].classList.remove("boutonIG");
             listeDesElements[j].classList.remove("boutonIGHorizontal");
             listeDesElements[j].classList.add("boutonIGVertical");
@@ -54,6 +66,7 @@ function adaptationImages() {
 
 function checkConstant() {
     ratioViewport();
+
     adaptationImages();
 }
 
