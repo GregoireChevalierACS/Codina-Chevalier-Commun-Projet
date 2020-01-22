@@ -20,6 +20,10 @@ $script = 'public/js/ratioViewport.js';
     <a href="index.php?action=infinimentGrand">Vers l'infini et au delà</a>
 </p>
 
+<p class="boutonRetour">
+    <a href="index.php?action=tag">Vos succès </a>
+</p>
+
 
 
 <?php $content = ob_get_clean(); ?>

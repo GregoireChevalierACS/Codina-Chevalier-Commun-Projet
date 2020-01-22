@@ -21,9 +21,9 @@ function planets($namePlanet){
     $namesSatellites = getNamesSatellites($namePlanet); 
     $question = getQuestion($namePlanet);
     $responses = getResponse($question['id']); 
-    if(!isset($_COOKIE['planet'])){
-        setcookie('planet', 'planet');
-        $_COOKIE['planet'] = false;
+    if(!isset($_COOKIE['Planet'])){
+        setcookie('Planet', 'Planet');
+        $_COOKIE['Planet'] = false;
         
     }
 
@@ -44,9 +44,9 @@ function phenomeneIG($namePhenomenonIG){
     if($namePhenomenonIG == "Les Galaxies"){
        $nameGalaxies = getNameGalaxies();
     }
-    if(!isset($_COOKIE['phenomeneIG'])){
-        setcookie('phenomeneIG', 'phenomeneIG');
-        $_COOKIE['phenomeneIG'] = false;
+    if(!isset($_COOKIE['PhenomeneIG'])){
+        setcookie('PhenomeneIG', 'PhenomeneIG');
+        $_COOKIE['PhenomeneIG'] = false;
         
     } 
     require('view/frontend/phenomenesIG.php');
@@ -69,24 +69,32 @@ require('view/frontend/launchedInfinimentPetit.php');
 
 function particle($nameParticle){
     $infoParticle = getInfosParticle($nameParticle);
-    if(!isset($_COOKIE['particle'])){
-        setcookie('particle', 'particle');
-        $_COOKIE['particle'] = false;
+    if(!isset($_COOKIE['Particle'])){
+        setcookie('Particle', 'Particle');
+        $_COOKIE['Particle'] = false;
         
     } 
     require('view/frontend/particle.php'); 
 }
 
 function getNewQuizz(){
-    print_r($_POST['theme']);
-    die();
-    if(!isset($_COOKIE[$_POST['theme']])){
-        setcookie($_POST['theme'], $_POST['theme']);
-        $_COOKIE[$_POST['theme']] = false;
+   
+   $cookie = $_GET['name'] . "quiz"; 
+    
+    if(!isset($_COOKIE[$cookie])){
+        setcookie($cookie, $cookie);
+        $_COOKIE[$cookie] = false;
         
     } 
    $question= getQuestion($_POST['theme']); 
    $responses = getResponse($question['id']);
    $lastGoodResponse = getLastGoodResponse($_POST['idGoodReponse']);
    require('view/frontend/quizz.php'); 
+}
+
+
+function tag(){
+    $tags = getTag();
+    require('view/frontend/tag.php'); 
+
 }
