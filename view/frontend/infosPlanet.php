@@ -86,6 +86,11 @@ require ('view/achievement.php');
         </div>
 
         <div class="mt-5 divInfos">
+            <p class="category"> Date de découverte : </p>
+            <?php echo nl2br(htmlspecialchars($infos['discovery_date'])); ?>
+        </div>
+
+        <div class="mt-5 divInfos">
             <p class="category"> Nombre de satellites : </p>
             <?php echo nl2br(htmlspecialchars($infos['satellites'])); ?>
         </div>

@@ -155,3 +155,11 @@ body{
   #ship img{
       width: 100%;
   }
+
+  footer{
+    z-index: 2000;
+    position : fixed; 
+    bottom: 0; 
+    width: 100%; 
+    background-color: black;
+}

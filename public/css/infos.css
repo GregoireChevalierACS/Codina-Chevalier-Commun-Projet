@@ -56,12 +56,13 @@ body,html{
     padding: 1vw;
     position: absolute;
     top: 30%;
-    margin:auto;
+    
 }
 
 #containerRight{
     width: 30%;
-    display: flex;
+    /* display: flex;
+    justify-content: center; */
     margin:auto;
     
     
@@ -125,7 +126,7 @@ width:30%;
     background-size: 47%;
 }
 
-#LesGalaxies{
+.backgroundImg{
     background-size: 55%;
 }
 
@@ -164,6 +165,47 @@ footer{
 }
 
 
+  
+@media screen and (max-width: 1024px) {
+    #containerInfosQuizz{
+        
+        margin-top: 5vh!important;
+        
+    }
+    #infos{
+        width:40%;
+    }
+    .infosPlanet{
+        padding: 2vh!important;
+    }
+
+    #quizz{
+        
+        width: 100%;
+        padding: 1vw;
+        /* height: 20%; */
+        position: relative;
+        margin-bottom: 10vh;
+       
+    }
+    #containerRight{
+        width: 40%; 
+        margin-top: 2vh !important;
+    }
+
+    #retour{
+        width: 15%;
+        padding: 0.5vw; 
+        position: absolute; 
+        top: 5px;
+        left: 5px;
+    }
+
+    
+    }
+
+    
+
 @media screen and (max-width: 640px) {
     #containerInfosQuizz{
         display: block;
@@ -183,6 +225,7 @@ footer{
         padding: 1vw;
         /* height: 20%; */
         position: relative;
+        margin-bottom: 10vh;
        
     }
     #containerRight{

@@ -16,7 +16,7 @@ function menu(){
     require('view/frontend/menu.php');
 }
 
-function planets($namePlanet){
+function planets($namePlanet){   
     $infosArray = getInfos($namePlanet);
     $namesSatellites = getNamesSatellites($namePlanet); 
     $question = getQuestion($namePlanet);

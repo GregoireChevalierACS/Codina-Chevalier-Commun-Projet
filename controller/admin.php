@@ -70,6 +70,8 @@ function infosModifiees($tables)
     } else if ($tables == "PhenomenesInfinimentGrand") {
         donneesModifieesIG();
     }
+    header("Location: admin.php");
+    exit();
 
 }
 

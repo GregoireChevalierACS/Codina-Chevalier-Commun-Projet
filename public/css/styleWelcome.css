@@ -1,7 +1,7 @@
 body{
     display: flex;
     padding-top: 3vh;
-    padding-left: 0.5vw;
+    /* padding-left: 0.5vw; */
     width: 100vw;
     height: 100vh;
     background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
@@ -14,7 +14,7 @@ body{
     justify-content: left;
     align-items: flex-end;
     width: 100vw;
-    height: 97vh;
+    height: 94vh;
 }
 
 .sol{
@@ -88,24 +88,16 @@ body{
         padding-bottom: 60vh;
     }
 }
+footer{
+    z-index: 2000;
+    position : fixed; 
+    bottom: 0; 
+    width: 100%; 
+    background-color: black;
+}
 
-/* .ball {
-    pointer-events: none;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: gray;
-    animation: implode 1s ease-in-out;
-    animation-fill-mode: both;
-    opacity: .2;
+@media screen and (max-width: 640px) {
+    .fond{
+      height: 89vh;
+    }
   }
-  #wrap {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    overflow: hidden;
-    z-index: 2;
-    border: 3px solid black;
-  }
- */

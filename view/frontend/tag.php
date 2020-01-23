@@ -16,7 +16,7 @@ $script = "public/js/infos.js";
 
 
 <div class="container-fluid">
-    <div class="row mt-5">
+    <div class="row " id="tagContainer">
         <?php 
         foreach($tags as $tag){ ?>
         

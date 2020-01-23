@@ -11,7 +11,7 @@ require ('view/achievement.php');
 <header class="mb-5">
 <h1 class="text-center"><?= $infos['topicName'] ?> </h1>
     <div id="retour">
-        <a href="index.php?action=launch"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
+        <a href="index.php?action=infinimentPetit"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
         <p> Retour </p>
     </div>
 </header>

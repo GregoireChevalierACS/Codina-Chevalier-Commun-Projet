@@ -94,7 +94,7 @@ function getQuestion($theme){
     $req = $db->prepare('SELECT * FROM question WHERE theme = ? ORDER BY id');
     $req->execute(array($theme));
     $questions =  $req ->fetchAll();
-    $id = rand(0, (count($questions)-1)); 
+    $id = rand(0, (count($questions)-1));  
     return $questions[$id];
 }
 
@@ -205,12 +205,12 @@ function donneesModifieesPlanets(){
    
 function donneesModifieesIP(){
     $db = dbConnect(); 
-    $req = $db -> prepare("UPDATE PhenomesInfinimentPetit SET topicName = ?, type = ?, typeSecondary = ?, description = ?, discovery_date = ?, visuel = ? WHERE id= ?");
-    $req -> execute(array($_POST['topicName'],$_POST['type'],$_POST['typeSecondary'],$_POST['description'],$_POST['discovery_date'],$_POST['visuel'],$_POST['idTopic']));
+    $req = $db -> prepare("UPDATE PhenomesInfinimentPetit SET type = ?, typeSecondary = ?, description = ?, discovery_date = ?, visuel = ? WHERE id= ?");
+    $req -> execute(array($_POST['type'],$_POST['typeSecondary'],$_POST['description'],$_POST['discovery_date'],$_POST['visuel'],$_POST['idTopic']));
 }
 
 function donneesModifieesIG(){
     $db = dbConnect(); 
-    $req = $db -> prepare("UPDATE PhenomenesInfinimentGrand SET topicName = ?, subjectDescription = ?, history = ?, dimensions = ?, composition = ?, peopleRelatedTo = ?, visuel = ?, funFactEtLiens = ? WHERE id= ?");
-    $req -> execute(array($_POST['topicName'],$_POST['subjectDescription'],$_POST['history'],$_POST['dimensions'],$_POST['composition'],$_POST['peopleRelatedTo'],$_POST['visuel'],$_POST['funFactEtLiens'],$_POST['idTopic']));
+    $req = $db -> prepare("UPDATE PhenomenesInfinimentGrand SET subjectDescription = ?, history = ?, dimensions = ?, composition = ?, peopleRelatedTo = ?, visuel = ?, funFactEtLiens = ? WHERE id= ?");
+    $req -> execute(array($_POST['subjectDescription'],$_POST['history'],$_POST['dimensions'],$_POST['composition'],$_POST['peopleRelatedTo'],$_POST['visuel'],$_POST['funFactEtLiens'],$_POST['idTopic']));
 }

@@ -4,7 +4,7 @@ body,html{
     padding: 0;
     color: white!important;
     background-image: url('../../Ressources/VisuelsOK/startscreenFondV2.png');
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     
@@ -35,13 +35,44 @@ body,html{
     width:  100%;
 }
 
+#tagContainer{
+margin-top: 17vh;
+margin-bottom: 10vh;
+
+
+}
 
 @media screen and (max-width: 640px) {
 #retour{
-    width: 10%;
+    width: 20%;
     padding: 0.5vw; 
     position: absolute; 
     top: 5px;
     left: 5px;
 }
+
+#tagContainer{
+    margin-top: 1vh;
+    
+    
+    }
+
 }
+
+
+@media screen and (max-width: 1024px) {
+    #retour{
+        width: 20%;
+        padding: 0.5vw; 
+        position: absolute; 
+        top: 5px;
+        left: 5px;
+    }
+    
+    #tagContainer{
+        margin-top: 10vh;
+        
+        
+        }
+    
+    }
