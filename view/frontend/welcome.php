@@ -3,10 +3,15 @@
 <?php $script = 'public/js/welcome.js' ?>
 <?php ob_start(); ?>
 
-<!-- <em><a class="btn btn-primary">Launch!</a></em> -->
+
+<audio id="deco">
+    <source src="Ressources/music/decollage.mp3" type="audio/mpeg">  
+</audio>
+
 <div id="wrap"></div>
 <div>
-        <a href="javascript:delay('index.php?action=menu')"><button class="boutonLancement" id="BOUTONLANCEMENT" onclick="launch()" >Launch</button></a>
+        <a href="javascript:delay('index.php?action=menu')"><button class="boutonLancement" id="BOUTONLANCEMENT" onclick="launch(), playSound()" >Launch</button></a>
+        
 </div>
     <div class="fond">
     
