@@ -1,6 +1,2 @@
- for($i = 1; $i < count($columns);$i++){ ?>
-            <div class="form-group">
-                <label><?= $columns[$i]?></label>
-                <textarea name="ajout[<?=$columns[$i]?>]" class="form-control" id="exampleFormControlTextarea1" rows="3"> </textarea>
-            </div>
-            <?php } ?>
+Projet d'école pour l'ACS Strasbourg, site de vulgarisation de l'astro-physique et l'astronomie. 
+Projet réalisé selon le modèle MVC en PHP et MySql. 
