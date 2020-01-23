@@ -88,6 +88,12 @@ body{
     -webkit-transform: rotate(-90deg) translateX(-10vh);
 }
 
+#Soleil{
+    display: flex;
+    width: auto;
+    height: 95vh; 
+}
+
 #Mercure{
     display: flex;
     width: auto;
