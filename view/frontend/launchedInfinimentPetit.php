@@ -6,7 +6,7 @@ $script = 'public/js/ratioViewport.js';
 <?php ob_start(); ?>
 
 <body>
-    <div class="placeholderViewer">
+    <div class="placeholderViewer placeholderViewer2">
 
 
 

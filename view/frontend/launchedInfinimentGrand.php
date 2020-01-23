@@ -10,7 +10,7 @@ $script = 'public/js/ratioViewport.js';
 <body>
 
 
-<div class="placeholderViewer">
+<div class="placeholderViewer placeholderViewer2">
 
       <div class="scroll">
             <?php foreach($namesPhenomenon as $name){ ?>
