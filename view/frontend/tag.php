@@ -5,13 +5,22 @@ $script = "public/js/infos.js";
 ?>
 
 <?php ob_start(); ?>
-<h1 class="text-center mb-5"> Les badges que vous avez gagné : </h1>
+
+<header class="mb-5">
+<h1 class="text-center"> Haut-faits </h1>
+    <div class="mb-5" id="retour">
+        <a href="index.php?action=menu"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
+        <p> Retour </p>
+    </div>
+</header>
+
+
 <div class="container-fluid">
-    <div class="row">
+    <div class="row mt-5">
         <?php 
         foreach($tags as $tag){ ?>
         
-        <div class="col-md-2 col-xs-12 ">
+        <div class=" col-lg-2 col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center">
             <div class="card mt-3" style="width: 18rem; height: 30rem;">
                 <img class="card-img-top <?php 
                       if(!in_array($tag['nameCookie'], $_COOKIE)){

@@ -164,16 +164,6 @@ footer{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 640px) {
     #containerInfosQuizz{
         display: block;
@@ -198,6 +188,14 @@ footer{
     #containerRight{
         width: 90%; 
         margin-top: 2vh !important;
+    }
+
+    #retour{
+        width: 30%;
+        padding: 0.5vw; 
+        position: absolute; 
+        top: 5px;
+        left: 5px;
     }
   }
 

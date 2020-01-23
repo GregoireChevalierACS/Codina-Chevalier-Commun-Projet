@@ -8,27 +8,27 @@ require ('view/achievement.php');
 ?>
 
 <?php ob_start(); ?>
-
-<header>
+<header class="mb-5">
+<h1 class="text-center"><?= $infos['topicName'] ?> </h1>
     <div id="retour">
-        <a href="index.php?action=infinimentPetit"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
+        <a href="index.php?action=launch"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
         <p> Retour </p>
-
     </div>
+</header>
 
 
-    <div> <h1><?= $infos['topicName'] ?> </h1> </div>
-
-    <?php 
+<?php 
 if(isset($affichageParticle) && $affichageParticle){
     $affichageParticle = false; 
   ?>
-  
-<div class=" alert alert-success" role="alert">
-Elémentaire mon cher Watson
-</div>
-<?php } ?>
-</header>
+   
+ <div class="d-flex alert alert-success alert-dismissible" role="alert" id="achievement">
+ <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+ Elementaire, mon cher Watson ! 
+ </div>
+ <?php } ?>
+
+
 
 <div style=" background-image: url('');" class=" layer layer-1" data-type="parallax"
     data-depth="0.20" id="<?=$infos['topicName']?>"></div>

@@ -9,7 +9,7 @@ $script = 'public/js/ratioViewport.js';
 
 <body>
 
-    <!-- <div id="ship"><img src="Ressources/VisuelsOK/VaisseauVueDessus.png" data-type="parallax" data-depth="0.20"></div> -->
+
     <div class="placeholderViewer placeholderViewer2">
 
 
