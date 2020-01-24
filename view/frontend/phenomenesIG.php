@@ -1,5 +1,4 @@
 <?php 
-// var_dump($infosPhenomeneIG);
 $infos = $infosPhenomeneIG[0]; 
 
 $title = $infos[1];

@@ -16,5 +16,6 @@
         </div>
       </li>
     </ul>
+    <a class="navbar-brand" href="index.php">Le site </a>
   </div>
 </nav>

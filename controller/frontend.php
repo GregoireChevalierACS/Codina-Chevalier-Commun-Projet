@@ -85,6 +85,9 @@ require('view/frontend/launchedInfinimentPetit.php');
 
 function particle($nameParticle){
     $infoParticle = getInfosParticle($nameParticle);
+    $question = getQuestion($nameParticle);
+    $responses = getResponse($question['id']); 
+    
     if(!isset($_COOKIE['Particle'])){
         setcookie('Particle', 'Particle');
         $_COOKIE['Particle'] = false;
