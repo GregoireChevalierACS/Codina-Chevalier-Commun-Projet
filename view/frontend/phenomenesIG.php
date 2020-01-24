@@ -61,19 +61,7 @@ require ('view/achievement.php');
         <div class=" mt-5 divInfos">
             <p class="category"> Personnalités reliées :  </p>
             <?php echo nl2br(htmlspecialchars($infos['peopleRelatedTo'])); ?>
-<<<<<<< HEAD
         </div>      
-=======
-        </div>
-        <div class=" mt-5 divInfos">
-            <p class="category"> Lien vidéo :  </p>
-            <?php echo nl2br(htmlspecialchars($infos['funFactEtLiens'])); ?>
-        </div>
-
-
-
-        
->>>>>>> b54b110a1d5264dea8948ce9b06e77ef0154d860
 
         
     </div>
