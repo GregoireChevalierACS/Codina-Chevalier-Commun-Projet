@@ -22,10 +22,10 @@ $script = "public/js/infos.js";
         
         <div class=" col-lg-2 col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center">
             <div class="card mt-3" style="width: 18rem; height: 30rem;">
-                <img class="card-img-top <?php 
+                <img class="card-img-top   <?php 
                       if(!in_array($tag['nameCookie'], $_COOKIE)){
                         echo 'desactive'; 
-                    } ?> " src="<?= $tag['visuel'] ?>" alt="Card image cap">
+                    } ?> " style="min-height: 18rem;" src="<?= $tag['visuel'] ?>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class=" text-dark card-title"><?= $tag['nameTag']?></h5>
                     <p class="card-text text-dark"> <?= $tag['description']?> </p>

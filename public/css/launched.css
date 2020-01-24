@@ -7,7 +7,7 @@ body{
     background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
     background-size: 100vw 100vh;
     z-index: -2;
-
+    color: white !important;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
