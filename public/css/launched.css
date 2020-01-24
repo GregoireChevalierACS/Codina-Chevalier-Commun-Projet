@@ -36,7 +36,7 @@ body{
     display: flex; 
     justify-content: center; 
     width: 112vw;
-    height: 210vh;
+    height: 100vw;
     transform: rotate(-90deg) translateX(-110vh);
     -webkit-transform: rotate(-90deg) translateX(-110vh);
     -webkit-transform-origin: top left;
@@ -48,11 +48,12 @@ body{
 .gestionnaireScrollVertical{
     display: flex; 
     justify-content: center; 
-    width: 180vw;
+    width: 110vh;
     height: 100vh;
-    transform: translateX(-40vh);
-    -webkit-transform: translateX(-40vh);
+    transform: translateX(-30vh);
+    -webkit-transform: translateX(-30vh);
     overflow-y: scroll;
+    overflow-x: hidden;
     position: absolute;
 }
 
@@ -84,8 +85,8 @@ body{
 .boutonIGVertical{
     display: flex;
     height: 30vh;
-    transform: rotate(-90deg) translateX(-10vh);
-    -webkit-transform: rotate(-90deg) translateX(-10vh);
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
 }
 
 #Soleil{
@@ -127,7 +128,7 @@ body{
 #Saturne{
     display: flex;
     width: auto;
-    height: 88vh;  
+    height: 78vh;  
 }
 
 #Uranus{

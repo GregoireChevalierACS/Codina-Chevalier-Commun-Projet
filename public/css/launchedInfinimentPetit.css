@@ -31,32 +31,31 @@ body{
     display: flex;
 }
 
-
 .gestionnaireScrollHorizontal{
     display: flex; 
     justify-content: center; 
     width: 112vw;
-    height: 210vh;
+    height: 100vw;
     transform: rotate(-90deg) translateX(-110vh);
     -webkit-transform: rotate(-90deg) translateX(-110vh);
     -webkit-transform-origin: top left;
     transform-origin: top left;
     overflow-y: scroll;
-    overflow-x: hidden;
     position: absolute;
 }
 
 .gestionnaireScrollVertical{
     display: flex; 
     justify-content: center; 
-    width: 180vw;
+    width: 110vh;
     height: 100vh;
-    transform: translateX(-40vh);
-    -webkit-transform: translateX(-40vh);
+    transform: translateX(-30vh);
+    -webkit-transform: translateX(-30vh);
     overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
 }
+
 
 .scroll{
     
