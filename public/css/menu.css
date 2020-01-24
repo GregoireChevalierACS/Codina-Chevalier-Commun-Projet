@@ -32,3 +32,22 @@ footer a:hover{
     color: white;
 }
 
+.infPetit{
+display: flex;
+width: 35vh;
+}
+
+.systemeSolaire{
+    display: flex;
+    width: 35vh;
+    }
+    
+.infiniAuDela{
+    display: flex;
+    width: 35vh;
+    }
+
+    .achievs{
+        display: flex;
+        width: 10vh;
+    }

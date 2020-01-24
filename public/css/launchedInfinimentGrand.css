@@ -34,28 +34,28 @@ body{
 .gestionnaireScrollHorizontal{
     display: flex; 
     justify-content: center; 
-    width: 100vw;
-    height: 200vh;
+    width: 112vw;
+    height: 100vw;
     transform: rotate(-90deg) translateX(-110vh);
     -webkit-transform: rotate(-90deg) translateX(-110vh);
     -webkit-transform-origin: top left;
     transform-origin: top left;
     overflow-y: scroll;
-    overflow-x: hidden;
     position: absolute;
 }
 
 .gestionnaireScrollVertical{
     display: flex; 
     justify-content: center; 
-    width: 180vw;
+    width: 110vh;
     height: 100vh;
-    transform: translateX(-40vh);
-    -webkit-transform: translateX(-40vh);
+    transform: translateX(-30vh);
+    -webkit-transform: translateX(-30vh);
     overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
 }
+
 
 .scroll{
     
@@ -111,7 +111,7 @@ height: 10vh;
 
     display: flex;
     width: auto;
-    height: 25vh;
+    height: 45vh;
 }
 
 #LesGalaxies{

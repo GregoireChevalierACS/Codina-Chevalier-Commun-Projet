@@ -29,12 +29,12 @@ $script = 'public/js/ratioViewport.js';
                     </a>
                 </div>
                 <?php } ?>
-                </div>
-      </div>
-
                 <div class="boutonRetour">
                     <a href="index.php?action=menu">De retour entre les mondes</a>
                 </div>
+                </div>
+      </div>
+
             </div>
         </div>
 </body>
