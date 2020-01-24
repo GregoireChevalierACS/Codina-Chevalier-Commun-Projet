@@ -99,3 +99,22 @@ body{
 .disclaimer{
     color: white;
 }
+
+footer{
+    z-index: 2000;
+    position : fixed; 
+    bottom: 0; 
+    width: 100%; 
+    background-color: black;
+    font-size: 10px;
+}
+
+footer a{
+    text-decoration :none; 
+    color: white;
+}
+footer a:hover{
+    text-decoration :none; 
+    color: white;
+}
+
