@@ -2,7 +2,8 @@
 session_start();
     require('controller/frontend.php'); 
 
-    if (isset($_GET['action'])){
+    if (isset($_GET['action'])){    
+        // Si une action est définie, l'index va rediriger vers la fonction correspondante dans le controller
         if($_GET['action'] === 'launch'){
             launched();   
         } elseif($_GET['action'] === 'planets'){
@@ -26,7 +27,8 @@ session_start();
         }elseif($_GET['action'] === 'tag'){
            tag();
         }
-    }else{
+    }else{  
+        // Sinon, l'index renverra vers la fonction welcome(); qui envoie la page d'accueil
 
         welcome();
 

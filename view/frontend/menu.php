@@ -8,25 +8,21 @@ $script = 'public/js/ratioViewport.js';
 
 
 
-<p class="boutonRetour">
-    <a href="index.php?action=infinimentPetit">Dans les méandres de la matière</a>
-    <img src="Ressources/VisuelsOK/infPetit.png" class="infPetit">
-</p>
 
-<p class="boutonRetour">
-    <a href="index.php?action=launch">Le Système Solaire</a>
-    <img src="Ressources/VisuelsOK/solarsystem.png" class="systemeSolaire">
-</p>
+    <a href="index.php?action=infinimentPetit">Dans les méandres de la matière<img src="Ressources/VisuelsOK/infPetit.png" class="infPetit"></a>
 
-<p class="boutonRetour">
-    <a href="index.php?action=infinimentGrand">Vers l'infini et au delà</a>
-    <img src="Ressources/VisuelsOK/infbeyond.png" class="infiniAuDela">
-</p>
 
-<p class="boutonRetour">
-    <a href="index.php?action=tag">Vos succès </a>
-    <img src="Ressources/VisuelsOK/achiev.png" class="achievs">
-</p>
+
+    <a href="index.php?action=launch">Le Système Solaire<img src="Ressources/VisuelsOK/solarsystem.png" class="systemeSolaire"></a>
+
+
+
+    <a href="index.php?action=infinimentGrand">Vers l'infini et au delà<img src="Ressources/VisuelsOK/infbeyond.png" class="infiniAuDela"></a>
+
+
+
+    <a href="index.php?action=tag">Vos succès<img src="Ressources/VisuelsOK/achiev.png" class="achievs"></a>
+
 
 
 
