@@ -37,9 +37,15 @@ body,html{
 
 #tagContainer{
 margin-top: 17vh;
-margin-bottom: 10vh;
+margin-bottom: 10vh;}
 
-
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    width:100%;
+    background-color: black;
+    font-size: 10px;
 }
 
 @media screen and (max-width: 640px) {

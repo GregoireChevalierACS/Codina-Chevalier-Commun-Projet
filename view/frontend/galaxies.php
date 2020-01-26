@@ -1,4 +1,5 @@
 <?php 
+// A venir quand les visuels des galaxies seront fait
 $infos = $infosGalaxies[0]; 
 $title = $infosGalaxies[1];
 $style = null;

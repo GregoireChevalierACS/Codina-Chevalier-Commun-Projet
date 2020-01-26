@@ -4,7 +4,7 @@ $style = "public/css/modifSujet.css";
 $script = "";
 
 
-
+// Fonction qui gènere automatiquement un champ de formulaire qui corresond à la structure de la table
 function formType($type,$nameInput){
 
     if($type === 'int(9)'){

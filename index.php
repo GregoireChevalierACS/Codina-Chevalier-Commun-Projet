@@ -1,4 +1,5 @@
 <?php
+//Premier point d'entrée au site
 session_start();
     require('controller/frontend.php'); 
 

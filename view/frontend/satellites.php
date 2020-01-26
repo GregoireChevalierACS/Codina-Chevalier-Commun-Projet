@@ -1,4 +1,7 @@
 <?php 
+// A venir quand les visuels seront fait
+
+ 
 $infos = $infosSatellites[0]; 
 //$nameSatelitte = $infosSatellites[1];
 $title = $infosSatellites;

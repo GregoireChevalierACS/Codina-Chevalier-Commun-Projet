@@ -124,6 +124,7 @@ function getTag(){
 //  MODEL ADMIN
 
 
+// Fonction qui checke si l'utilisateur et son mdp correspond
 function dbAdminConnect(){
     $db = dbConnect(); 
     $req = $db->prepare('SELECT * FROM adminsUsers WHERE user = ? AND password = ?   '); 
@@ -167,13 +168,14 @@ function supprTopic($id, $nomTable){
     $req ->execute(array($id));
     return $req -> fetchAll(); 
 }
-
+// Fonction qui retourne la structure de la table passée en paramètre
 function patternTable($table){
     $db = dbConnect(); 
     $req = $db->prepare("SHOW COLUMNS FROM $table"); 
     $req -> execute(); 
     return $req -> fetchAll();
 }
+
 
 function infosToAdd($table){
     $db = dbConnect(); 

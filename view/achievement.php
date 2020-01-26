@@ -9,7 +9,7 @@ if(isset($_COOKIE[$themeQuiz]) && $_COOKIE[$themeQuiz] == false){
 } 
 
 
-
+// Ifs qui gérent l'affichage des divs quand on gagne un achievement
 
 if(isset($_COOKIE['Planet']) && $_COOKIE['Planet'] == false){
     

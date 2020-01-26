@@ -37,7 +37,7 @@ function logout()
     header("Location: admin.php");
     exit();
 }
-
+// Fonction qui permet l'affichage de tous les sujets contenus dans la base de données et qui appelle la vue correspondante
 function interfaceAdmin()
 {
 
@@ -52,12 +52,14 @@ function interfaceAdmin()
     require 'view/admin/interfaceAdmin.php';
 
 }
+// Fonction qui récupère les infos du sujet à modifié
 
 function modification($id, $nomTable)
 {
     $sujetModified = modifTopic($id, $nomTable);
     require 'view/admin/modification.php';
 }
+// Fonction qui permet l'envoi des données dans la base de donnée
 
 function infosModifiees($tables)
 {
@@ -74,30 +76,30 @@ function infosModifiees($tables)
     exit();
 
 }
-
+// Fonction qui permet la récupération de structure de la base de donnée afin que dans la vue correspondante un formulaire soit généré automatiquement en fonction de la structure
 function ajout($table){
     $columns = patternTable($table); 
     require('view/admin/ajout.php'); 
 }
-
+// Fonction qui permet d'ajouter un nouveau sujet à la base de donnée
+function infosAjoutees($table){
+    infosToAdd($table); 
+    header("Location: admin.php");
+     exit();
+ 
+ 
+ }
+// Fonction qui permet de confirmer la suppression
 function confirm($id, $nomTable){
     $idToDelete = $id;
     $tableToDelete = $nomTable;
     require('view/admin/suppression.php');
 }
-
+// Fonction qui permet la supression d'un sujet
 function suppr($id, $nomTable){
     $sujetDeleted = supprTopic($id, $nomTable);
     header("Location: admin.php");
     exit();
-}
-
-function infosAjoutees($table){
-   infosToAdd($table); 
-   header("Location: admin.php");
-    exit();
-
-
 }
 
 function profil(){
@@ -106,6 +108,5 @@ function profil(){
 }
 
 function changePass(){
-    updatePass(); 
-    echo 'Tout va bien';
+    updatePass();
 }

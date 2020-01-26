@@ -1,4 +1,6 @@
 <?php
+// Deuxième point d'entrée pour permettre la connexion à l'interface admin
+
 session_start();
 require 'controller/admin.php';
 
