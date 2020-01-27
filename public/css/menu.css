@@ -34,24 +34,59 @@ footer a:hover{
 
 .infPetit{
 display: flex;
-width: 30vw;
-height: auto;
 }
 
 .systemeSolaire{
     display: flex;
-    width: 30vw;
-    height: auto;
     }
     
 .infiniAuDela{
     display: flex;
-    width: 30vw;
-    height: auto;
     }
 
     .achievs{
         display: flex;
-        width: 10vw;
+        width: 8vw;
+    }
+
+    .containerMenu{
+        display: flex;
+    }
+
+
+    .containerMenu2{
+        display: flex;
+    }
+
+    .containerMenuH{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        align-self: center;
+    }
+
+    .containerMenuV{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        margin-left: 10vw;
+    }
+
+    .placeholderClass{
+        color: cyan;
+    }
+
+    .classH{
+        color: cyan;
+        width: 30vw;
+        height: auto;
+    }
+
+    .classV{
+        color: cyan;
+        width: 30vh;
         height: auto;
     }
