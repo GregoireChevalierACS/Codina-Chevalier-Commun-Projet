@@ -90,3 +90,8 @@ display: flex;
         width: 30vh;
         height: auto;
     }
+
+    a:hover{
+        text-decoration:none!important;
+        color:cyan!important; 
+    }

@@ -79,6 +79,15 @@ window.addEventListener('wheel', function (e) {
         layer.style.transform = translate3d;
     }
 });
- 
+
+
+let shipReturn = document.getElementById('shipReturn')
+shipReturn.addEventListener('mouseover', function(e){
+  this.src = "Ressources/VisuelsOK/startscreenShipV4.gif";
+
+})
+shipReturn.addEventListener('mouseout', function(){
+  this.src = "Ressources/VisuelsOK/startscreenShipV4.png";
+})
 
 checkConstant();

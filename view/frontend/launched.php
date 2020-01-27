@@ -13,30 +13,29 @@ $script = 'public/js/ratioViewport.js';
     <div class="placeholderViewer placeholderViewer2">
 
 
-        
-            <div class="scroll">
-                <p class="boutonRetour">
-                    <a href="index.php?action=menu">De retour entre les mondes</a>
-                </p>
-                <?php foreach($namesPlanets as $name){ ?>
-                <?php 
+
+        <div class="scroll">
+            <div class="boutonRetour">
+                <a href="index.php?action=menu"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
+                <p> Retour </p>
+            </div>
+            <?php foreach($namesPlanets as $name){ ?>
+            <?php 
                     $nom = $name['topicName'];
                     $concatenation = str_replace(' ', '', $nom);
                ?>
-               <div class="type">   
-                    <a href="index.php?action=planets&name=<?=$nom?>">
+            <div class="type">
+                <a href="index.php?action=planets&name=<?=$nom?>">
                     <img src="<?=$name['visuel'] ?>" class="boutonIG placeholderClass" id="<?= $concatenation ?>">
-                    </a>
-                </div>
-                <?php } ?>
-                <div class="boutonRetour">
-                    <a href="index.php?action=menu">De retour entre les mondes</a>
-                </div>
-                </div>
-     
-
+                </a>
             </div>
+            <?php } ?>
+            
         </div>
+
+
+    </div>
+    </div>
 </body>
 
 <?php $content = ob_get_clean(); ?>

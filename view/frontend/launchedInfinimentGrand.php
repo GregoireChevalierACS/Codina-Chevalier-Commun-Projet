@@ -11,6 +11,10 @@ $script = 'public/js/ratioViewport.js';
 
       
             <div class="scroll">
+            <div class="boutonRetour">
+                <a href="index.php?action=menu"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
+                <p> Retour </p>
+            </div>
                   <?php foreach($namesPhenomenon as $name){ ?>
                         <?php 
                               $nom = $name['topicName'];
@@ -25,9 +29,7 @@ $script = 'public/js/ratioViewport.js';
                   <?php } ?> 
             </div>
       </div>
-<div class="boutonRetour">
-<a href="index.php?action=menu">De retour entre les mondes</a>
-</div>
+
 </body>
 
 <?php $content = ob_get_clean(); ?>

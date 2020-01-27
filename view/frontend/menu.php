@@ -21,7 +21,7 @@ $script = 'public/js/menu.js';
 
 
 
-    <a href="index.php?action=tag">Vos succès<img src="Ressources/VisuelsOK/achiev.png"  class="achievs"></a>
+    <a href="index.php?action=tag" class="placeholderClass">Vos succès<img src="Ressources/VisuelsOK/achiev.png"  class="achievs"></a>
 </div>
 
 

@@ -70,11 +70,19 @@ body{
 }
 
 
+
 .boutonRetour{
     display: flex;
     justify-self: center;
     align-self: center;
     z-index: 4;
+    width:10%;
+    position:fixed;
+    color:white;
+}
+
+.boutonRetour img{
+   width:100%;
 }
 
 .boutonIGHorizontal{
