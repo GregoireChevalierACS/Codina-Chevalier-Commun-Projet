@@ -163,7 +163,7 @@ body{
       width: 100%;
   }
 
-  footer{
+  /* footer{
     z-index: 2000;
     position : fixed; 
     bottom: 0; 
@@ -179,4 +179,79 @@ footer a{
 footer a:hover{
     text-decoration :none; 
     color: white;
+} */
+
+
+
+
+@media screen and (max-width: 1024px) {
+    body{
+        background-color: transparent!important;
+        background-image: none!important;
+
+    }
+
+    .placeholderViewer{
+        background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
+        
+    }
+
+    .gestionnaireScrollVertical {
+      
+        
+        height: 100vh;
+        position: fixed;
+    }
+   
+    #Soleil{
+        display: flex;
+        width: auto;
+        height: 50vh; 
+    }
+
+    #Jupiter{
+        display: flex;
+        width: auto;
+        height: 50vh;  
+    }
+
+
+
+}
+
+@media screen and (max-width: 700px) {
+    body{
+        background-color: transparent!important;
+        background-image: none!important;
+
+    }
+
+    .placeholderViewer{
+        background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
+        
+    }
+
+    .gestionnaireScrollVertical {
+      
+        width: 90vh!important;
+        height: 100vh!important;
+        position: fixed!important;
+    }
+    .scroll{
+        height: auto!important;
+    }
+
+    #Soleil{
+        display: flex;
+        width: auto;
+        height: 50vh; 
+    }
+
+    #Jupiter{
+        display: flex;
+        width: auto;
+        height: 50vh;  
+    }
+
+
 }

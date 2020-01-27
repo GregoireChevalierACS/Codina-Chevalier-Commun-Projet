@@ -13,7 +13,7 @@ $script = 'public/js/ratioViewport.js';
     <div class="placeholderViewer placeholderViewer2">
 
 
-        <div data-type="parallax" data-depth="0.90">
+        
             <div class="scroll">
                 <p class="boutonRetour">
                     <a href="index.php?action=menu">De retour entre les mondes</a>
@@ -33,7 +33,7 @@ $script = 'public/js/ratioViewport.js';
                     <a href="index.php?action=menu">De retour entre les mondes</a>
                 </div>
                 </div>
-      </div>
+     
 
             </div>
         </div>
