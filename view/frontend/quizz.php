@@ -79,7 +79,7 @@ if(isset($phenomeneIGquiz) &&  $phenomeneIGquiz){
     <input name="idGoodReponse" type="hidden" value="<?= $question['idGoodReponse'] ?>">
     <input name="theme" type="hidden" value="<?= $question['theme'] ?>">
     <?php foreach($responses as $response){ ?>
-    <div>
+    <div class="d-flex flex-nowrap align-items-center ">
         <input class="quizzCheckbox" type="radio" name="reponse" value="<?=$response['id'] ?>">
         <label for="<?=$response['reponse'] ?>"><?=$response['reponse'] ?></label>
     </div>
