@@ -12,6 +12,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     overflow-y: hidden;
+    overflow-x: hidden;
     /* scrollbar-width: none; */
 }
 
@@ -34,7 +35,7 @@ body{
 .gestionnaireScrollHorizontal{
     display: flex; 
     justify-content: center; 
-    width: 112vw;
+    width: 110vw;
     height: 100vw;
     transform: rotate(-90deg) translateX(-110vh);
     -webkit-transform: rotate(-90deg) translateX(-110vh);
