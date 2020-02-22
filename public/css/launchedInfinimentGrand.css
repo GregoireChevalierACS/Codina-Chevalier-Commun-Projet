@@ -85,6 +85,16 @@ body{
    width:100%;
 }
 
+.retour{
+    background-color: rgba(233, 206, 206, 0.774);
+    border-radius: 8px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    margin-top: 1vh;
+}
+
 .boutonIGHorizontal{
     display: flex;
     height: 30vh;
@@ -187,7 +197,13 @@ height: 10vh;
 }
 
 .placeholderTitres{
-    color: white;
+    background-color: rgba(233, 206, 206, 0.774);
+    border-radius: 8px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    margin-top: 1vh;
 }
 
 .titresHorizontaux{

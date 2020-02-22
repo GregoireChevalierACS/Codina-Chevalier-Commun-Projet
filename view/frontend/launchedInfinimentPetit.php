@@ -12,8 +12,7 @@ $script = 'public/js/ratioViewport.js';
 
         <div class="scroll">
         <div class="boutonRetour">
-                <a href="index.php?action=menu"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"></a>
-                <p> Retour </p>
+                <a href="index.php?action=menu"><img id="shipReturn" src="Ressources/VisuelsOK/startscreenShipV4.png"> <p class="retour"> Retour </p></a>
             </div>
             <?php foreach($namesminisizeTopics as $name){ ?>
                     <?php 
