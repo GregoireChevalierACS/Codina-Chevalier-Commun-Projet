@@ -1,6 +1,6 @@
 body{
     
-    padding-left: 0.5vw;
+    
     width: 100vw;
     height: 100vh;
     background-image: url("../../Ressources/VisuelsOK/startscreenFondV2.png");
@@ -38,4 +38,23 @@ footer a:hover{
     background-color: grey;
 }
 
+/* .aside{
+    background-color:;
+} */
+
+.topic{
+    font-size: 1.5em;
+    cursor: pointer; 
+
+}
+
+.topic:hover{
+    text-decoration: underline;
+}
+
+.subject{
+
+    display: none;
+
+}
 
