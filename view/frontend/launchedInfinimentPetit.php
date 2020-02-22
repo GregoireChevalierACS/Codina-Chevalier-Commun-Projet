@@ -1,5 +1,5 @@
 <?php $title = 'Infiniment Petit';
-$style = 'public/css/launched.css';
+$style = 'public/css/launchedInfinimentPetit.css';
 $script = 'public/js/ratioViewport.js';
  ?>
 

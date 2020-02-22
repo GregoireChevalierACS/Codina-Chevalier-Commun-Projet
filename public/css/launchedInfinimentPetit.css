@@ -56,7 +56,6 @@ body{
     position: absolute;
 }
 
-
 .scroll{
     
     display: flex;  
@@ -75,6 +74,13 @@ body{
     justify-self: center;
     align-self: center;
     z-index: 4;
+    width:10%;
+    position:fixed;
+    color:white;
+}
+
+.boutonRetour img{
+   width:100%;
 }
 
 .retour{
@@ -127,6 +133,16 @@ footer a{
 footer a:hover{
     text-decoration :none; 
     color: white;
+}
+
+.placeholderTitres{    
+    background-color: rgba(233, 206, 206, 0.774);
+    border-radius: 8px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    margin-top: 1vh;
 }
 
 
