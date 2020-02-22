@@ -9,10 +9,11 @@
 </audio>
 
 <div id="wrap"></div>
-<div>
+<div class="boutonsCentre">
         <a href="javascript:delay('index.php?action=menu')"><button class="boutonLancement" id="BOUTONLANCEMENT" onclick="launch(), playSound()" >Launch</button></a>
-        
+         <a href="index.php?action=menu"><button class="boutonSkip"onclick="launch()" >Skip to site</button></a>
 </div>
+
     <div class="fond">
     
         <img src="Ressources/VisuelsOK/startscreenFondSol.png" class="sol">

@@ -74,6 +74,8 @@ body{
     display: flex;
     justify-self: center;
     align-self: center;
+    justify-content: center;
+    padding-left: 1vw;
     z-index: 4;
     width:10%;
     position:fixed;
@@ -81,6 +83,16 @@ body{
 
 .boutonRetour img{
    width:100%;
+}
+
+.retour{
+    background-color: rgba(233, 206, 206, 0.774);
+    border-radius: 8px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    margin-top: 1vh;
 }
 
 .boutonIGHorizontal{
