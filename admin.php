@@ -23,7 +23,7 @@ if (isset($_GET['action'])) {
     } elseif($_GET['action'] =='suppression'){
         suppr($_GET['id'], $_GET['table']); 
     } elseif($_GET['action'] =='confirmation'){
-        confirm($_GET['id'], $_GET['table']); 
+        confirm($_GET['id'], $_GET['table'], $_GET['nameTopic']); 
     } elseif($_GET['action'] == 'ajoute'){
         infosAjoutees($_GET['table']);
     } elseif($_GET['action'] == 'profil'){
@@ -32,5 +32,6 @@ if (isset($_GET['action'])) {
         changePass();
     }
 } else {
-    interfaceAdmin();
+    $suppr = false;
+    interfaceAdmin($suppr);
 }

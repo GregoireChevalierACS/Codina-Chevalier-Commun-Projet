@@ -38,7 +38,7 @@ function logout()
     exit();
 }
 // Fonction qui permet l'affichage de tous les sujets contenus dans la base de données et qui appelle la vue correspondante
-function interfaceAdmin()
+function interfaceAdmin($suppr)
 {
 
     $planetDB = getAllInfos("Planets");
@@ -49,6 +49,7 @@ function interfaceAdmin()
         "PhenomesInfinimentPetit" => $iPDB,
         "PhenomenesInfinimentGrand" => $iGDB,
     ];
+    $suppression = $suppr;
     require 'view/admin/interfaceAdmin.php';
 
 }
@@ -90,16 +91,19 @@ function infosAjoutees($table){
  
  }
 // Fonction qui permet de confirmer la suppression
-function confirm($id, $nomTable){
+function confirm($id, $nomTable,$nameTopic){
     $idToDelete = $id;
     $tableToDelete = $nomTable;
+    $nameOfTopic = $nameTopic;
     require('view/admin/suppression.php');
 }
 // Fonction qui permet la supression d'un sujet
 function suppr($id, $nomTable){
     $sujetDeleted = supprTopic($id, $nomTable);
-    header("Location: admin.php");
-    exit();
+    $suppr = true;
+    interfaceAdmin($suppr); 
+    // header("Location: admin.php");
+    // exit();
 }
 
 function profil(){

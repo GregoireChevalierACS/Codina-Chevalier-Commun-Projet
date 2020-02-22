@@ -17,3 +17,25 @@ footer{
     background-color: black;
     font-size: 10px;
 }
+
+footer a{
+    text-decoration :none; 
+    color: white;
+}
+footer a:hover{
+    text-decoration :none; 
+    color: white;
+}
+
+.contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%; 
+    height: 100%;
+}
+#formAdmin{
+    background-color: grey;
+}
+
+
