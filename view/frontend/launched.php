@@ -23,12 +23,11 @@ $script = 'public/js/ratioViewport.js';
             <?php 
                     $nom = $name['topicName'];
                     $concatenation = str_replace(' ', '', $nom);
-                    var_dump($name); 
-                    die();
+                    
                ?>
             <div class="type">
                 <a href="index.php?action=planets&name=<?=$nom?>">
-                    <img  style="height: <?=$name['sizeIMG']?>" src="<?=$name['visuel'] ?>" class="boutonIG placeholderClass" id="<?= $concatenation ?>">
+                    <img  style="height: <?=$name['sizeIMG']?>vh" src="<?=$name['visuel'] ?>" class="boutonIG placeholderClass" id="<?= $concatenation ?>">
                 </a>
             </div>
             <?php } ?>

@@ -46,6 +46,9 @@ function changeKeytoValue($key){
   
     switch($key){
 
+        case "sizeIMG": 
+            return "Taille de l'image à l'écran :  (en pourcentage hauteur d'écran)";
+            
         case "topicName":
             
             return   "Nom du topic :"; 

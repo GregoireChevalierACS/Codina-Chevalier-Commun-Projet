@@ -110,7 +110,7 @@ body{
 .placeholderClass{
     display: flex;
 }
-
+/* 
 #LessondesVoyager{
     display: flex;
 width: auto;
@@ -190,7 +190,7 @@ height: 10vh;
     width: auto;
     height: 45vh;
 
-}
+} */
 
 ::-webkit-scrollbar{
     display: none;

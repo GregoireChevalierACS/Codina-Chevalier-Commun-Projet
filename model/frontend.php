@@ -28,7 +28,7 @@ function getInfos($namePlanet){
 
 function getNamePlanets(){
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT topicName, visuel FROM Planets ORDER BY id');
+    $req = $db->prepare('SELECT topicName, visuel, sizeIMG FROM Planets ORDER BY id');
     $req->execute();
     return $req ->fetchAll();
 }
@@ -42,7 +42,7 @@ function getNamesSatellites($namePlanet){
 
 function getNamePhenomenons(){
     $db = dbConnect(); 
-    $req = $db->prepare('SELECT topicName, visuel FROM PhenomenesInfinimentGrand ORDER BY id');
+    $req = $db->prepare('SELECT topicName, visuel, sizeIMG FROM PhenomenesInfinimentGrand ORDER BY id');
     $req->execute();
     return $req ->fetchAll();
 }

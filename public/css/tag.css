@@ -48,6 +48,15 @@ footer{
     font-size: 10px;
 }
 
+footer a{
+    text-decoration :none; 
+    color: white;
+}
+footer a:hover{
+    text-decoration :none; 
+    color: white;
+}
+
 @media screen and (max-width: 640px) {
 #retour{
     width: 20%;
