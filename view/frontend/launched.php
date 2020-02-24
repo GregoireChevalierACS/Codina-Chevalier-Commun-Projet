@@ -26,6 +26,7 @@ $script = 'public/js/ratioViewport.js';
                     
                ?>
             <div class="type">
+            <div class="placeholderTitres"><?=$name['topicName']?></div>
                 <a href="index.php?action=planets&name=<?=$nom?>">
                     <img  style="height: <?=$name['sizeIMG']?>vh" src="<?=$name['visuel'] ?>" class="boutonIG placeholderClass" id="<?= $concatenation ?>">
                 </a>
